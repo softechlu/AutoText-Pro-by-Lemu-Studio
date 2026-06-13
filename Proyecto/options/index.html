@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoText Pro by SofTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════ HEADER ═══════════════ -->
+<header class="header">
+  <div class="header-inner">
+    <div class="brand">
+      <div class="brand-icon"><img src="../icons/icon128.png" alt="AutoText Pro" /></div>
+      <div class="brand-text">
+        <span class="brand-title">AutoText <span class="brand-pro">Pro</span></span>
+        <span class="brand-sub">by SofTech</span>
+      </div>
+    </div>
+    <div class="header-center">
+      <div class="search-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Buscar por atajo o texto…" autocomplete="off" />
+        <button id="btnClearSearch" class="search-clear" style="display:none">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="btn-icon" id="btnImport" title="Importar JSON">
+        <i class="fa-solid fa-file-arrow-up"></i>
+        <span>Importar</span>
+      </button>
+      <button class="btn-icon" id="btnExport" title="Exportar JSON">
+        <i class="fa-solid fa-file-arrow-down"></i>
+        <span>Exportar</span>
+      </button>
+      <button class="btn-icon" id="btnDark" title="Modo oscuro">
+        <i class="fa-solid fa-moon"></i>
+        <span>Tema</span>
+      </button>
+      <button class="btn-primary" id="btnNew">
+        <i class="fa-solid fa-plus"></i>
+        Nuevo shortcut
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="dropZone" class="drop-zone" style="display:none">
+  <div class="drop-inner">
+    <i class="fa-solid fa-file-arrow-down"></i>
+    <p>Suelta el archivo JSON aquí</p>
+  </div>
+</div>
+
+<!-- ═══════════════ LAYOUT ═══════════════ -->
+<div class="layout">
+
+  <!-- LEFT: shortcuts list -->
+  <main class="main-panel">
+
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stats-info">
+        <span id="statsTotal" class="stats-count">0</span>
+        <span class="stats-label">shortcuts</span>
+        <span id="statsFiltered" class="stats-filtered"></span>
+      </div>
+      <div class="stats-hint">
+        <i class="fa-solid fa-circle-info"></i>
+        Escribe el atajo en cualquier campo | Recuerda usar antes de cada <kbd>palabra</kbd> un <kbd>diferenciador (! | . | , | *)</kbd>
+      </div>
+    </div>
+
+    <!-- Table header -->
+    <div class="table-header">
+      <div class="th-shortcut">Atajo</div>
+      <div class="th-text">Texto expandido</div>
+      <div class="th-actions">Acciones</div>
+    </div>
+
+    <!-- Shortcuts list -->
+    <div class="shortcuts-list" id="shortcutsList"></div>
+
+    <!-- Empty state -->
+    <div class="empty-state" id="emptyState" style="display:none">
+      <div class="empty-icon"><i class="fa-solid fa-keyboard"></i></div>
+      <p class="empty-title">Sin resultados</p>
+      <p class="empty-sub">No hay shortcuts que coincidan con tu búsqueda</p>
+    </div>
+
+    <!-- Pagination -->
+    <div class="pagination" id="pagination"></div>
+  </main>
+
+  <!-- RIGHT: test panel -->
+  <aside class="test-panel">
+    <div class="test-header">
+      <i class="fa-solid fa-flask-vial"></i>
+      Probar shortcuts
+    </div>
+    <div class="test-body">
+      <p class="test-hint">Usa este <kbd>recuadro</kbd> para <kbd>ensayar</kbd> en tiempo real tus atajos.</p>
+      <textarea id="testArea" placeholder="Escribe aquí... prueba: .hola"></textarea>
+      <button class="btn-ghost btn-sm" id="btnClearTest">
+        <i class="fa-solid fa-eraser"></i> Limpiar
+      </button>
+    </div>
+    <div class="test-shortcuts-hint">
+      <p class="hint-title">Shortcuts activos:</p>
+      <div id="hintList" class="hint-list"></div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  Powered by<strong> SofTech </strong> &copy; <span id="footerYear"></span>
+</footer>
+
+<!-- ═══════════════ MODAL CREAR/EDITAR ═══════════════ -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-card">
+    <div class="modal-header">
+      <h3 id="modalTitle">Nuevo shortcut</h3>
+      <button class="btn-close" id="btnCloseModal"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="inputShortcut">Atajo <span class="label-hint">ej: .saludo</span></label>
+          <input type="text" id="inputShortcut" placeholder=".miAtajo" autocomplete="off" spellcheck="false" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputText">Texto expandido</label>
+        <textarea id="inputText" rows="6" placeholder="El texto completo que aparecerá al usar el atajo…"></textarea>
+        <div class="char-count"><span id="charCount">0</span> caracteres</div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-ghost" id="btnCancelModal">Cancelar</button>
+      <button class="btn-primary" id="btnSaveModal">
+        <i class="fa-solid fa-floppy-disk"></i> Guardar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ MODAL ELIMINAR ═══════════════ -->
+<div class="modal-overlay" id="deleteOverlay">
+  <div class="modal-card modal-sm">
+    <div class="modal-header">
+      <h3>Eliminar shortcut</h3>
+      <button class="btn-close" id="btnCloseDelete"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="delete-warning">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <p>¿Eliminar <strong id="deleteShortcutName"></strong>? Esta acción no se puede deshacer.</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-ghost" id="btnCancelDelete">Cancelar</button>
+      <button class="btn-danger" id="btnConfirmDelete">
+        <i class="fa-solid fa-trash"></i> Eliminar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<!-- File input hidden -->
+<input type="file" id="fileInput" accept=".json" style="display:none" />
+
+<script src="index.js"></script>
+</body>
+</html>
