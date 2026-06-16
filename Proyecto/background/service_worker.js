@@ -3,8 +3,8 @@
 chrome.runtime.onInstalled.addListener(async (details) => {
   if (details.reason === 'install') {
     const examples = [
-      { id: 1, shortcut: '.hola', text: '¡Hola! ¿Cómo estás? Espero que tengas un excelente día.' },
-      { id: 2, shortcut: '*tel',  text: '3001234567' },
+      { id: String(Date.now()),     shortcut: '.hola', text: '¡Hola! ¿Cómo estás? Espero que tengas un excelente día.' },
+      { id: String(Date.now() + 1), shortcut: '*tel',  text: '3001234567' },
     ];
     chrome.storage.sync.set({ shortcuts: examples });
   }
@@ -25,4 +25,11 @@ chrome.runtime.onInstalled.addListener(async (details) => {
 // Open options page when toolbar icon is clicked
 chrome.action.onClicked.addListener(() => {
   chrome.runtime.openOptionsPage();
+});
+
+// Open options page with keyboard shortcut Alt+Shift+A
+chrome.commands.onCommand.addListener((command) => {
+  if (command === 'open-options') {
+    chrome.runtime.openOptionsPage();
+  }
 });

@@ -86,6 +86,18 @@ function applyFilter() {
         sc.text.toLowerCase().includes(searchQuery))
     : [...allShortcuts];
 
+if (currentSort === 'az') filtered.sort((a, b) => a.shortcut.localeCompare(b.shortcut));
+  else if (currentSort === 'za') filtered.sort((a, b) => b.shortcut.localeCompare(a.shortcut));
+
+  if (showDupsOnly) {
+    const textCount = {};
+    allShortcuts.forEach(sc => {
+      const key = sc.text.trim();
+      textCount[key] = (textCount[key] || 0) + 1;
+    });
+    filtered = filtered.filter(sc => textCount[sc.text.trim()] > 1);
+  }
+
   statsTotal.textContent = allShortcuts.length;
 
   if (searchQuery && filtered.length !== allShortcuts.length) {
@@ -240,7 +252,7 @@ btnNew.addEventListener('click', () => {
 });
 
 function openEdit(id) {
-  const sc = allShortcuts.find(s => s.id === id);
+  const sc = allShortcuts.find(s => String(s.id) === String(id));
   if (!sc) return;
   editingId = id;
   modalTitle.textContent  = 'Editar shortcut';
@@ -265,14 +277,14 @@ function saveShortcut() {
   if (!shortcut) { shake(inputShortcut); inputShortcut.focus(); return; }
   if (!text)     { shake(inputText);     inputText.focus();     return; }
 
-  const dup = allShortcuts.find(sc => sc.shortcut === shortcut && sc.id !== editingId);
+  const dup = allShortcuts.find(sc => sc.shortcut === shortcut && String(sc.id) !== String(editingId));
   if (dup) { showToast(`El atajo "${shortcut}" ya existe`); shake(inputShortcut); return; }
 
   if (editingId !== null) {
-    const idx = allShortcuts.findIndex(sc => sc.id === editingId);
+    const idx = allShortcuts.findIndex(sc => String(sc.id) === String(editingId));
     if (idx !== -1) allShortcuts[idx] = { ...allShortcuts[idx], shortcut, text };
   } else {
-    allShortcuts.push({ id: Date.now(), shortcut, text });
+    allShortcuts.push({ id: String(Date.now()), shortcut, text });
   }
 
   persist(() => {
@@ -283,7 +295,7 @@ function saveShortcut() {
 }
 
 function openDelete(id) {
-  const sc = allShortcuts.find(s => s.id === id);
+  const sc = allShortcuts.find(s => String(s.id) === String(id));
   if (!sc) return;
   deleteId = id;
   deleteShortcutName.textContent = sc.shortcut;
@@ -291,7 +303,7 @@ function openDelete(id) {
 }
 
 btnConfirmDelete.addEventListener('click', () => {
-  allShortcuts = allShortcuts.filter(sc => sc.id !== deleteId);
+  allShortcuts = allShortcuts.filter(sc => String(sc.id) !== String(deleteId));
   persist(() => {
     closeModal(deleteOverlay);
     showToast('Shortcut eliminado');
@@ -306,6 +318,71 @@ function persist(cb) {
     if (cb) cb();
   });
 }
+
+// ── Delete All ────────────────────────────────────────────────────────────────
+const btnDeleteAll = $('btnDeleteAll');
+
+btnDeleteAll.addEventListener('click', () => {
+  if (!allShortcuts.length) { showToast('No hay shortcuts para borrar'); return; }
+  $('deleteAllCount').textContent = allShortcuts.length;
+  openModal($('deleteAllOverlay1'));
+});
+
+// Paso 1 — No / cerrar: no hace nada
+$('btnDeleteAllNo1').addEventListener('click',    () => closeModal($('deleteAllOverlay1')));
+$('btnCloseDeleteAll1').addEventListener('click', () => closeModal($('deleteAllOverlay1')));
+
+// Paso 1 — Sí: ir al paso 2
+$('btnDeleteAllSi1').addEventListener('click', () => {
+  closeModal($('deleteAllOverlay1'));
+  openModal($('deleteAllOverlay2'));
+});
+
+// Paso 2 — No / cerrar: no hace nada
+$('btnDeleteAllNo2').addEventListener('click',    () => closeModal($('deleteAllOverlay2')));
+$('btnCloseDeleteAll2').addEventListener('click', () => closeModal($('deleteAllOverlay2')));
+
+// Paso 2 — Confirmar: descarga el backup y abre paso 3
+$('btnDeleteAllConfirm').addEventListener('click', () => {
+  const blob = new Blob(
+    [JSON.stringify({ version: 1, shortcuts: allShortcuts }, null, 2)],
+    { type: 'application/json' }
+  );
+  const url = URL.createObjectURL(blob);
+  const a   = Object.assign(document.createElement('a'), {
+    href: url,
+    download: `autotext-pro-backup-${stamp()}.json`
+  });
+  a.click();
+  URL.revokeObjectURL(url);
+
+  closeModal($('deleteAllOverlay2'));
+$('inputDeleteConfirm').value = '';
+  $('btnDeleteAllFinal').disabled = false;
+  openModal($('deleteAllOverlay3'));
+});
+
+// Paso 3 — No / cerrar: no hace nada
+$('btnDeleteAllNo3').addEventListener('click',    () => closeModal($('deleteAllOverlay3')));
+$('btnCloseDeleteAll3').addEventListener('click', () => closeModal($('deleteAllOverlay3')));
+
+// Paso 3 — Final: validar palabra y borrar todo
+$('btnDeleteAllFinal').addEventListener('click', () => {
+  if ($('inputDeleteConfirm').value !== 'B0rr4r') {
+    showToast('Palabra incorrecta — escribe exactamente B0rr4r');
+    const overlay = $('deleteAllOverlay3');
+    overlay.classList.remove('modal-shake');
+    void overlay.offsetWidth;
+    overlay.classList.add('modal-shake');
+    setTimeout(() => overlay.classList.remove('modal-shake'), 500);
+    return;
+  }
+  allShortcuts = [];
+  persist(() => {
+    closeModal($('deleteAllOverlay3'));
+    showToast('Todos los shortcuts eliminados ✓');
+  });
+});
 
 // ── Export ────────────────────────────────────────────────────────────────────
 btnExport.addEventListener('click', () => {
@@ -323,63 +400,173 @@ btnExport.addEventListener('click', () => {
   showToast(`${allShortcuts.length} shortcuts exportados ✓`);
 });
 
+// ── Sort & Filtros ────────────────────────────────────────────────────────────
+let currentSort = 'created';
+let showDupsOnly = false;
+
+document.getElementById('btnShowDups').addEventListener('click', () => {
+  showDupsOnly = true;
+  document.getElementById('btnClearFilter').style.display = 'inline-flex';
+  document.getElementById('btnShowDups').style.display = 'none';
+  currentPage = 1;
+  applyFilter();
+});
+
+document.getElementById('btnClearFilter').addEventListener('click', () => {
+  showDupsOnly = false;
+  document.getElementById('btnClearFilter').style.display = 'none';
+  document.getElementById('btnShowDups').style.display = 'inline-flex';
+  currentPage = 1;
+  applyFilter();
+});
+document.addEventListener('click', e => {
+  const btn = e.target.closest('.sort-btn');
+  if (!btn) return;
+  document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  currentSort = btn.dataset.sort;
+  currentPage = 1;
+  applyFilter();
+});
+
 // ── Import & Drag/Drop ────────────────────────────────────────────────────────
 const dropZone = $('dropZone');
 
 function processFile(file) {
   if (!file) return;
-  if (!file.name.endsWith('.json')) {
-    showToast('Solo se aceptan archivos .json');
+  const ext = file.name.split('.').pop().toLowerCase();
+  if (!['json','yaml','yml','xml','csv'].includes(ext)) {
+    showToast('Formatos aceptados: .json, .yaml, .yml, .xml, .csv');
     return;
   }
 
   const reader = new FileReader();
   reader.onload = ev => {
     try {
-      const parsed = JSON.parse(ev.target.result);
+      const txt = ev.target.result;
       let raw = [];
 
-      // Detección de formato (Array, Objeto con 'shortcuts', o Diccionario plano)
-      if (Array.isArray(parsed)) {
-        raw = parsed;
-      } else if (parsed.shortcuts && Array.isArray(parsed.shortcuts)) {
-        raw = parsed.shortcuts;
-      } else if (typeof parsed === 'object' && parsed !== null) {
-        const values = Object.values(parsed);
-        if (values.length && typeof values[0] === 'object' && values[0].trigger) {
-          raw = values.map(e => ({ shortcut: e.trigger, text: e.body }));
-        } else {
-          raw = Object.entries(parsed).map(([key, val]) => ({
-            shortcut: key,
-            text: String(val)
-          }));
+      if (ext === 'json') {
+        const parsed = JSON.parse(txt);
+        if (Array.isArray(parsed)) {
+          raw = parsed;
+        } else if (parsed.shortcuts && Array.isArray(parsed.shortcuts)) {
+          raw = parsed.shortcuts;
+        } else if (typeof parsed === 'object' && parsed !== null) {
+          const values = Object.values(parsed);
+          if (values.length && typeof values[0] === 'object' && values[0].trigger) {
+            raw = values.map(e => ({ shortcut: e.trigger, text: e.body }));
+          } else {
+            raw = Object.entries(parsed).map(([key, val]) => ({ shortcut: key, text: String(val) }));
+          }
         }
       }
 
+      else if (ext === 'yaml' || ext === 'yml') {
+        const matches = [...txt.matchAll(/- trigger:\s*['"]?(.+?)['"]?\s*\n\s+replace:\s*([\s\S]*?)(?=\n- trigger:|\n*$)/gm)];
+        raw = matches.map(m => ({ shortcut: m[1].trim(), text: m[2].trim() }));
+      }
+
+      else if (ext === 'xml') {
+        const doc = new DOMParser().parseFromString(txt, 'text/xml');
+        doc.querySelectorAll('snippet').forEach(n => {
+          const shortcut = n.querySelector('abbreviation')?.textContent?.trim();
+          const text     = n.querySelector('string')?.textContent?.trim();
+          if (shortcut && text) raw.push({ shortcut, text });
+        });
+        if (!raw.length) {
+          doc.querySelectorAll('phrase').forEach(n => {
+            const shortcut = n.querySelector('trigger')?.textContent?.trim();
+            const text     = n.querySelector('insert')?.textContent?.trim();
+            if (shortcut && text) raw.push({ shortcut, text });
+          });
+        }
+      }
+
+      else if (ext === 'csv') {
+        const lines = txt.split('\n').map(l => l.trim()).filter(Boolean);
+        const start = lines[0]?.toLowerCase().startsWith('shortcut') ? 1 : 0;
+        lines.slice(start).forEach(line => {
+          const comma = line.indexOf(',');
+          if (comma === -1) return;
+          const shortcut = line.slice(0, comma).trim().replace(/^"|"$/g, '');
+          const text     = line.slice(comma + 1).trim().replace(/^"|"$/g, '');
+          if (shortcut && text) raw.push({ shortcut, text });
+        });
+      }
+
       const valid = raw.filter(sc => sc.shortcut && sc.text).map(sc => ({
-        id: sc.id || Date.now() + Math.random(),
+        id: String(Date.now() + Math.random()),
         shortcut: String(sc.shortcut).trim(),
         text: String(sc.text),
       }));
 
-      if (!valid.length) throw new Error('Sin shortcuts válidos');
+      if (!valid.length) throw new Error('Sin shortcuts válidos en el archivo');
 
-      // Actualizar el array global y persistir
+      const duplicates = valid.filter(imp => allShortcuts.some(s => s.shortcut === imp.shortcut));
+      const newOnes    = valid.filter(imp => !allShortcuts.some(s => s.shortcut === imp.shortcut));
+
+      if (duplicates.length > 0) {
+        const dupOverlay  = $('dupOverlay');
+        const dupMessage  = $('dupMessage');
+        dupMessage.textContent = duplicates.length === 1
+          ? `"${duplicates[0].shortcut}" ya existe. ¿Qué deseas hacer?`
+          : `${duplicates.length} shortcuts ya existen. ¿Qué deseas hacer?`;
+        openModal(dupOverlay);
+
+        const cleanup = () => {
+          $('btnDupOverwrite').onclick = null;
+          $('btnDupRename').onclick    = null;
+          $('btnDupCancel').onclick    = null;
+          $('btnCloseDup').onclick     = null;
+          closeModal(dupOverlay);
+        };
+
+        $('btnDupOverwrite').onclick = () => {
+          cleanup();
+          newOnes.forEach(imp => allShortcuts.push(imp));
+          duplicates.forEach(imp => {
+            const idx = allShortcuts.findIndex(s => s.shortcut === imp.shortcut);
+            if (idx !== -1) allShortcuts[idx] = Object.assign(allShortcuts[idx], imp);
+          });
+          persist(() => {
+            const msg = [newOnes.length && `${newOnes.length} nuevos`, duplicates.length && `${duplicates.length} sobreescritos`].filter(Boolean).join(', ');
+            showToast(`Importados: ${msg} ✓`);
+          });
+        };
+
+        $('btnDupRename').onclick = () => {
+          cleanup();
+          newOnes.forEach(imp => allShortcuts.push(imp));
+          duplicates.forEach(imp => {
+            let base = imp.shortcut, n = 2, candidate = `${base[0]}${n}${base.slice(1)}`;
+            while (allShortcuts.some(s => s.shortcut === candidate)) { n++; candidate = `${base[0]}${n}${base.slice(1)}`; }
+            allShortcuts.push({ ...imp, shortcut: candidate, id: String(Date.now() + Math.random()) });
+          });
+          persist(() => {
+            const msg = [newOnes.length && `${newOnes.length} nuevos`, duplicates.length && `${duplicates.length} renombrados`].filter(Boolean).join(', ');
+            showToast(`Importados: ${msg} ✓`);
+          });
+        };
+
+        $('btnDupCancel').onclick = () => { cleanup(); newOnes.forEach(imp => allShortcuts.push(imp)); persist(() => showToast(`${newOnes.length} nuevos agregados, ${duplicates.length} saltados ✓`)); };
+        $('btnCloseDup').onclick  = () => { cleanup(); };
+        return;
+      }
+
+      let added = 0, updated = 0;
       valid.forEach(imp => {
         const idx = allShortcuts.findIndex(s => s.shortcut === imp.shortcut);
-        if (idx !== -1) allShortcuts[idx] = Object.assign(allShortcuts[idx], imp);
-        else allShortcuts.push(imp);
+        if (idx !== -1) { allShortcuts[idx] = Object.assign(allShortcuts[idx], imp); updated++; }
+        else { allShortcuts.push(imp); added++; }
       });
 
       persist(() => {
-        showToast(`${valid.length} shortcuts importados ✓`);
-        // Invocamos la función de refresco global
-        if (typeof render === 'function') {
-          render();
-        }
+        const msg = [added && `${added} nuevos`, updated && `${updated} actualizados`].filter(Boolean).join(', ');
+        showToast(`Importados: ${msg} ✓`);
       });
     } catch (err) {
-      showToast('Error: ' + err.message);
+      showToast('Error al importar: ' + err.message);
     }
     fileInput.value = '';
   };

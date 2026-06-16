@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AutoText Pro by SofTech</title>
+  <title>AutoText Pro by Lemu Studio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -18,7 +18,7 @@
       <div class="brand-icon"><img src="../icons/icon128.png" alt="AutoText Pro" /></div>
       <div class="brand-text">
         <span class="brand-title">AutoText <span class="brand-pro">Pro</span></span>
-        <span class="brand-sub">by SofTech</span>
+        <span class="brand-sub">by Lemu Studio</span>
       </div>
     </div>
     <div class="header-center">
@@ -34,6 +34,10 @@
       <button class="btn-icon" id="btnImport" title="Importar JSON">
         <i class="fa-solid fa-file-arrow-up"></i>
         <span>Importar</span>
+      </button>
+      <button class="btn-icon btn-icon-danger" id="btnDeleteAll" title="Borrar todos los shortcuts">
+        <i class="fa-solid fa-trash-can"></i>
+        <span>Borrar todo</span>
       </button>
       <button class="btn-icon" id="btnExport" title="Exportar JSON">
         <i class="fa-solid fa-file-arrow-down"></i>
@@ -54,10 +58,10 @@
 <div id="dropZone" class="drop-zone" style="display:none">
   <div class="drop-inner">
     <i class="fa-solid fa-file-arrow-down"></i>
-    <p>Suelta el archivo JSON aquí</p>
+    <p>Suelta el archivo aquí</p>
+    <p style="font-size:11px; opacity:0.7; margin-top:4px;">.json · .yaml · .xml · .csv</p>
   </div>
 </div>
-
 <!-- ═══════════════ LAYOUT ═══════════════ -->
 <div class="layout">
 
@@ -73,15 +77,33 @@
       </div>
       <div class="stats-hint">
         <i class="fa-solid fa-circle-info"></i>
-        Escribe el atajo en cualquier campo | Recuerda usar antes de cada <kbd>palabra</kbd> un <kbd>diferenciador (! | . | , | *)</kbd>
+        Tip: Recuerda incluir un diferenciador <kbd>(! - . , *)</kbd> antes de cada palabra, así evitas que se expanda texto inesperado.
       </div>
+   </div>
+        <!-- Sort controls -->
+    <div class="sort-row" style="display:flex; gap:6px; margin-bottom:8px; flex-wrap:wrap; justify-content:center; padding: 12px 22px 4px;">
+      <button class="btn-ghost btn-sm sort-btn active" data-sort="created" title="Orden original">
+        <i class="fa-solid fa-clock-rotate-left"></i> Orden original
+      </button>
+      <button class="btn-ghost btn-sm sort-btn" data-sort="az" title="A → Z">
+        <i class="fa-solid fa-arrow-down-a-z"></i> A–Z
+      </button>
+      <button class="btn-ghost btn-sm sort-btn" data-sort="za" title="Z → A">
+        <i class="fa-solid fa-arrow-up-z-a"></i> Z–A
+      </button>
+      <button class="btn-ghost btn-sm" id="btnShowDups" title="Mostrar textos duplicados">
+        <i class="fa-solid fa-copy"></i> Duplicados
+      </button>
+      <button class="btn-ghost btn-sm" id="btnClearFilter" title="Limpiar filtro" style="display:none">
+        <i class="fa-solid fa-xmark"></i> Limpiar filtro
+      </button>
     </div>
 
     <!-- Table header -->
     <div class="table-header">
       <div class="th-shortcut">Atajo</div>
       <div class="th-text">Texto expandido</div>
-      <div class="th-actions">Acciones</div>
+      <div class="th-actions" style="text-align:left">Acciones</div>
     </div>
 
     <!-- Shortcuts list -->
@@ -90,8 +112,8 @@
     <!-- Empty state -->
     <div class="empty-state" id="emptyState" style="display:none">
       <div class="empty-icon"><i class="fa-solid fa-keyboard"></i></div>
-      <p class="empty-title">Sin resultados</p>
-      <p class="empty-sub">No hay shortcuts que coincidan con tu búsqueda</p>
+      <p class="empty-title">Oops! Aún nada por aquí</p>
+      <p class="empty-sub">No hay shortcuts aún. Creálos en la esquina superior derecha en el icono: <kbd> "+ Nuevo Shorcut"</kbd></p>
     </div>
 
     <!-- Pagination -->
@@ -121,7 +143,11 @@
 
 <!-- ═══════════════ FOOTER ═══════════════ -->
 <footer class="footer">
-  Powered by<strong> SofTech </strong> &copy; <span id="footerYear"></span>
+  <span>
+    <i class="fa-solid fa-heart" style="color:#e05c5c; margin-right:4px;"></i>
+    Esta extensión es <strong>gratuita</strong>, sin embargo tiene un límite aprox. de<strong> 400–500 shortcuts</strong> según cada navegador.
+  </span>
+  <span>Powered by <strong>Lemu Studio</strong> &copy; <span id="footerYear"></span></span>
 </footer>
 
 <!-- ═══════════════ MODAL CREAR/EDITAR ═══════════════ -->
@@ -175,11 +201,105 @@
   </div>
 </div>
 
+<!-- ═══════════════ MODAL BORRAR TODO — PASO 1 ═══════════════ -->
+<div class="modal-overlay" id="deleteAllOverlay1">
+  <div class="modal-card modal-sm">
+    <div class="modal-header">
+      <h3>¿Borrar todos los shortcuts?</h3>
+      <button class="btn-close" id="btnCloseDeleteAll1"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="delete-warning">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <p>Esta acción eliminará <strong id="deleteAllCount"></strong> shortcuts. <strong>Primero debes guardar un respaldo.</strong> ¿Deseas continuar?</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-ghost" id="btnDeleteAllNo1">No, cancelar</button>
+      <button class="btn-danger" id="btnDeleteAllSi1">
+        <i class="fa-solid fa-arrow-right"></i> Sí, hacer respaldo
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ MODAL BORRAR TODO — PASO 2 ═══════════════ -->
+<div class="modal-overlay" id="deleteAllOverlay2">
+  <div class="modal-card modal-sm">
+    <div class="modal-header">
+      <h3>Guardar respaldo obligatorio</h3>
+      <button class="btn-close" id="btnCloseDeleteAll2"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="delete-warning">
+        <i class="fa-solid fa-floppy-disk"></i>
+        <p>Se descargará tu respaldo. <strong>Solo tras confirmar la descarga se borrarán los shortcuts.</strong> Si cerrás este aviso sin descargar, no se borrará nada.</p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-ghost" id="btnDeleteAllNo2">Cancelar</button>
+      <button class="btn-danger" id="btnDeleteAllConfirm">
+        <i class="fa-solid fa-floppy-disk"></i> Descargar respaldo y borrar
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ MODAL BORRAR TODO — PASO 3 ═══════════════ -->
+<div class="modal-overlay" id="deleteAllOverlay3">
+  <div class="modal-card modal-sm">
+    <div class="modal-header">
+      <h3>Confirmación final</h3>
+      <button class="btn-close" id="btnCloseDeleteAll3"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="delete-warning">
+        <i class="fa-solid fa-keyboard"></i>
+        <p>Para confirmar la eliminación escribe exactamente: <kbd>B0rr4r</kbd></p>
+      </div>
+      <div style="margin-top:16px;">
+        <input type="text" id="inputDeleteConfirm" placeholder="Escribe B0rr4r aquí…" autocomplete="off" spellcheck="false" style="width:100%; box-sizing:border-box;" />
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-ghost" id="btnDeleteAllNo3">Cancelar</button>
+      <button class="btn-danger" id="btnDeleteAllFinal">
+        <i class="fa-solid fa-trash-can"></i> Eliminar todo
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ MODAL DUPLICADOS ═══════════════ -->
+<div class="modal-overlay" id="dupOverlay">
+  <div class="modal-card modal-dup">
+    <div class="modal-header">
+      <h3>Shortcuts duplicados</h3>
+      <button class="btn-close" id="btnCloseDup"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <div class="delete-warning">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <p id="dupMessage"></p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btn-ghost" id="btnDupCancel">Cancelar</button>
+      <button class="btn-ghost" id="btnDupRename">
+        <i class="fa-solid fa-pen"></i> Renombrar
+      </button>
+      <button class="btn-danger" id="btnDupOverwrite">
+        <i class="fa-solid fa-rotate"></i> Sobreescribir
+      </button>
+    </div>
+  </div>
+</div>
+
 <!-- Toast -->
 <div class="toast" id="toast"></div>
 
 <!-- File input hidden -->
-<input type="file" id="fileInput" accept=".json" style="display:none" />
+<input type="file" id="fileInput" accept=".json,.yaml,.yml,.xml,.csv" style="display:none" />
 
 <script src="index.js"></script>
 </body>

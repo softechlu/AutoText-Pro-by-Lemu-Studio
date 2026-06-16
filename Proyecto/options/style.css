@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════
-   AutoText Pro by SofTech — Options Page CSS
+   AutoText Pro by Lemu Studio — Options Page CSS
    ═══════════════════════════════════════════ */
 
 :root { 
@@ -39,14 +39,19 @@
 }
 
 body.dark {
+  --primary:      #4da6d0;
+  --primary-dark: #3a8ab5;
+  --primary-glow: rgba(77,166,208,0.15);
+  --accent:       #5bb8d4;
+  --accent-glow:  rgba(91,184,212,0.15);
   --bg:           #0d1117;
   --bg-card:      #161b22;
   --bg-input:     #0d1117;
   --bg-hover:     rgba(255,255,255,0.04);
   --bg-row-hover: rgba(255,255,255,0.02);
   --text:         #e6edf3;
-  --text-muted:   #8b949e;
-  --text-light:   #484f58;
+  --text-muted:   #adbac7;
+  --text-light:   #768390;
   --border:       #21262d;
   --border-strong:#30363d;
   --shadow-sm:    0 1px 4px rgba(0,0,0,0.3);
@@ -56,7 +61,7 @@ body.dark {
 
 /* ── Reset ────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { height: 100%; }
+html, body { height: 100%; overflow: hidden; }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
@@ -127,10 +132,14 @@ body {
 }
 
 .brand-pro {
-  background: linear-gradient(90deg, #0b304a, #1a7fa8);
+  background: linear-gradient(90deg, var(--primary), var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+body.dark .btn-primary {
+  box-shadow: 0 2px 8px rgba(77,166,208,0.25);
 }
 
 .brand-sub {
@@ -326,8 +335,11 @@ body {
   padding: 24px 28px;
   gap: 24px;
   align-items: flex-start;
+  overflow-y: auto;
+  min-height: 0;
 }
 
+.layout::-webkit-scrollbar { display: none; }
 /* ── Main panel ───────────────────────────── */
 .main-panel {
   flex: 1;
@@ -390,6 +402,23 @@ body {
   gap: 6px;
 }
 
+.stats-hint i { color: var(--primary); }
+
+@keyframes modalShake {
+  0%,100% { transform: translateX(0);   box-shadow: var(--shadow-lg); }
+  15%     { transform: translateX(-7px); box-shadow: 0 0 24px 6px rgba(239,68,68,0.5); }
+  30%     { transform: translateX(7px);  box-shadow: 0 0 24px 6px rgba(239,68,68,0.5); }
+  45%     { transform: translateX(-4px); box-shadow: 0 0 18px 4px rgba(239,68,68,0.3); }
+  60%     { transform: translateX(4px);  box-shadow: 0 0 18px 4px rgba(239,68,68,0.3); }
+  75%     { transform: translateX(-2px); box-shadow: 0 0 10px 2px rgba(239,68,68,0.15); }
+}
+.modal-shake .modal-card {
+  animation: modalShake 0.35s ease forwards;
+}
+
+.btn-icon-danger { color: var(--danger) !important; }
+.btn-icon-danger:hover { background: rgba(239,68,68,0.08) !important; }
+
 kbd {
   display: inline-block;
   padding: 1px 6px;
@@ -405,7 +434,7 @@ kbd {
 /* Table header */
 .table-header {
   display: grid;
-  grid-template-columns: 180px 1fr 100px;
+  grid-template-columns: 180px 1fr 110px;
   padding: 10px 22px;
   background: var(--bg);
   border-bottom: 1px solid var(--border);
@@ -425,7 +454,7 @@ kbd {
 /* Row */
 .sc-row {
   display: grid;
-  grid-template-columns: 180px 1fr 100px;
+  grid-template-columns: 180px 1fr 110px;
   align-items: center;
   padding: 14px 22px;
   border-bottom: 1px solid var(--border);
@@ -461,7 +490,7 @@ kbd {
 .sc-actions {
   display: flex;
   gap: 4px;
-  justify-content: flex-end;
+  justify-content: flex-start;
   opacity: 0;
   transition: opacity 0.15s;
 }
@@ -572,7 +601,9 @@ kbd {
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   position: sticky;
-  top: calc(var(--header-h) + 24px);
+  top: 0;
+  align-self: flex-start;
+  max-height: calc(100vh - var(--header-h) - var(--footer-h) - 48px);
 }
 
 .test-header {
@@ -587,7 +618,7 @@ kbd {
   background: var(--bg);
 }
 
-.test-header i { color: var(--accent); }
+.test-header i { color: var(--primary); }
 
 .test-body {
   padding: 18px 20px;
@@ -714,6 +745,8 @@ kbd {
 }
 
 .modal-sm { max-width: 360px; }
+.modal-dup { max-width: 440px; }
+.modal-dup .modal-footer { flex-wrap: wrap; gap: 6px; }
 
 @keyframes modalIn {
   from { opacity: 0; transform: scale(0.95) translateY(10px); }
@@ -828,8 +861,8 @@ kbd {
   height: var(--footer-h);
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 6px;
+  justify-content: space-between;
+  padding: 0 24px;
   background: var(--bg-card);
   border-top: 1px solid var(--border);
   font-size: 12px;
