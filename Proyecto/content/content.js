@@ -27,7 +27,12 @@
     const start = pos - trigger.length;
     if (start < 0) return;
 
-    const newVal = val.substring(0, start) + expansion + val.substring(pos);
+    // En INPUT de una línea los \n no aplican — los convertimos a espacio
+    const safeExpansion = el.tagName === 'INPUT'
+      ? expansion.replace(/\n+/g, ' ')
+      : expansion;
+
+    const newVal = val.substring(0, start) + safeExpansion + val.substring(pos);
 
     const proto  = el.tagName === 'TEXTAREA' ? HTMLTextAreaElement.prototype : HTMLInputElement.prototype;
     const setter = Object.getOwnPropertyDescriptor(proto, 'value')?.set;
@@ -37,7 +42,7 @@
     el.dispatchEvent(new Event('input',  { bubbles: true }));
     el.dispatchEvent(new Event('change', { bubbles: true }));
 
-    const newCursor = start + expansion.length;
+    const newCursor = start + safeExpansion.length;
     el.setSelectionRange(newCursor, newCursor);
   }
 
@@ -53,11 +58,22 @@
     const before = text.substring(0, offset);
     if (!before.endsWith(trigger)) return;
 
-    node.textContent = before.slice(0, -trigger.length) + expansion + text.slice(offset);
+    const range2 = document.createRange();
+    range2.setStart(node, before.length - trigger.length);
+    range2.setEnd(node, offset);
+    range2.deleteContents();
 
-    const newRange  = document.createRange();
-    const newOffset = offset - trigger.length + expansion.length;
-    newRange.setStart(node, Math.min(newOffset, node.textContent.length));
+    const lines = expansion.split('\n');
+    const frag  = document.createDocumentFragment();
+    lines.forEach((line, i) => {
+      if (i > 0) frag.appendChild(document.createElement('br'));
+      if (line) frag.appendChild(document.createTextNode(line));
+    });
+    const lastNode = frag.lastChild;
+    range2.insertNode(frag);
+
+    const newRange = document.createRange();
+    newRange.setStartAfter(lastNode || node);
     newRange.collapse(true);
     sel.removeAllRanges();
     sel.addRange(newRange);
@@ -91,6 +107,7 @@
       if (before.endsWith(sc.shortcut)) {
         if (isInput) replaceInInput(el, sc.shortcut, sc.text);
         else replaceInContentEditable(el, sc.shortcut, sc.text);
+        chrome.runtime.sendMessage({ type: 'INCREMENT_USES', shortcutId: sc.id });
         return;
       }
     }

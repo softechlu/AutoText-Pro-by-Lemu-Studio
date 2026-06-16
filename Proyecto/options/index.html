@@ -15,7 +15,7 @@
 <header class="header">
   <div class="header-inner">
     <div class="brand">
-      <div class="brand-icon"><img src="../icons/icon128.png" alt="AutoText Pro" /></div>
+      <div class="brand-icon"><img src="../icons/logo-light.png" id="brandLogo" alt="AutoText Pro" /></div>
       <div class="brand-text">
         <span class="brand-title">AutoText <span class="brand-pro">Pro</span></span>
         <span class="brand-sub">by Lemu Studio</span>
@@ -65,7 +65,15 @@
 <!-- ═══════════════ LAYOUT ═══════════════ -->
 <div class="layout">
 
-  <!-- LEFT: shortcuts list -->
+<!-- SIDEBAR: categorías -->
+  <nav class="cat-panel">
+    <div class="cat-title">
+      <span><i class="fa-solid fa-tags"></i> Categorías</span>
+      <button class="btn-cat-add" id="btnNewCategory" title="Nueva categoría"><i class="fa-solid fa-plus"></i></button>
+    </div>
+    <div id="categoryList"></div>
+  </nav>
+
   <main class="main-panel">
 
     <!-- Stats -->
@@ -91,7 +99,9 @@
       <button class="btn-ghost btn-sm sort-btn" data-sort="za" title="Z → A">
         <i class="fa-solid fa-arrow-up-z-a"></i> Z–A
       </button>
-      <button class="btn-ghost btn-sm" id="btnShowDups" title="Mostrar textos duplicados">
+      <button class="btn-ghost btn-sm sort-btn" data-sort="uses" title="Más usados">
+        <i class="fa-solid fa-fire"></i> Más usados
+      </button>      <button class="btn-ghost btn-sm" id="btnShowDups" title="Mostrar textos duplicados">
         <i class="fa-solid fa-copy"></i> Duplicados
       </button>
       <button class="btn-ghost btn-sm" id="btnClearFilter" title="Limpiar filtro" style="display:none">
@@ -128,7 +138,7 @@
     </div>
     <div class="test-body">
       <p class="test-hint">Usa este <kbd>recuadro</kbd> para <kbd>ensayar</kbd> en tiempo real tus atajos.</p>
-      <textarea id="testArea" placeholder="Escribe aquí... prueba: .hola"></textarea>
+      <textarea id="testArea" placeholder="Escribe aquí... prueba un atajo que ya tengas creado"></textarea>
       <button class="btn-ghost btn-sm" id="btnClearTest">
         <i class="fa-solid fa-eraser"></i> Limpiar
       </button>
@@ -145,7 +155,7 @@
 <footer class="footer">
   <span>
     <i class="fa-solid fa-heart" style="color:#e05c5c; margin-right:4px;"></i>
-    Esta extensión es <strong>gratuita</strong>, sin embargo tiene un límite aprox. de<strong> 400–500 shortcuts</strong> según cada navegador.
+    Esta extensión es <strong>gratuita | </strong>Existe un límite aproximado de<strong> 400–500 shortcuts</strong>, esto puede variar según navegador.
   </span>
   <span>Powered by <strong>Lemu Studio</strong> &copy; <span id="footerYear"></span></span>
 </footer>
@@ -163,6 +173,17 @@
           <label for="inputShortcut">Atajo <span class="label-hint">ej: .saludo</span></label>
           <input type="text" id="inputShortcut" placeholder=".miAtajo" autocomplete="off" spellcheck="false" />
         </div>
+      </div>
+      <div class="form-group">
+        <label>Categoría</label>
+        <div class="custom-select" id="categorySelect">
+          <div class="custom-select-trigger" id="categorySelectTrigger">
+            <span id="categorySelectLabel">General</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="custom-select-dropdown" id="categorySelectDropdown"></div>
+        </div>
+        <input type="hidden" id="inputCategory" value="General" />
       </div>
       <div class="form-group">
         <label for="inputText">Texto expandido</label>
@@ -266,6 +287,25 @@
       <button class="btn-danger" id="btnDeleteAllFinal">
         <i class="fa-solid fa-trash-can"></i> Eliminar todo
       </button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ MODAL CATEGORÍAS ═══════════════ -->
+<div class="modal-overlay" id="catOverlay">
+  <div class="modal-card modal-dup">
+    <div class="modal-header">
+      <h3>Gestionar categorías</h3>
+      <button class="btn-close" id="btnCloseCat"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body">
+      <div style="display:flex; gap:8px; margin-bottom:16px;">
+        <input type="text" id="inputCatName" placeholder="Nombre de categoría…" autocomplete="off" style="flex:1" />
+        <button class="btn-primary btn-sm" id="btnSaveCat">
+          <i class="fa-solid fa-plus"></i> Crear
+        </button>
+      </div>
+      <div id="catManagerList" style="display:flex; flex-direction:column; gap:6px; max-height:260px; overflow-y:auto;"></div>
     </div>
   </div>
 </div>

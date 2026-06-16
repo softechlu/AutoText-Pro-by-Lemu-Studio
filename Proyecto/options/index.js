@@ -8,6 +8,8 @@ let currentPage    = 1;
 let searchQuery    = '';
 let editingId      = null;
 let deleteId       = null;
+let activeCategory = 'all';
+let allCategories  = [{ name: 'General', desc: '' }];
 
 // ── DOM ───────────────────────────────────────────────────────────────────────
 const $ = id => document.getElementById(id);
@@ -48,7 +50,8 @@ const toast            = $('toast');
 // ── Init ──────────────────────────────────────────────────────────────────────
 $('footerYear').textContent = new Date().getFullYear();
 
-chrome.storage.sync.get(['shortcuts', 'darkMode'], (r) => {
+chrome.storage.sync.get(['shortcuts', 'darkMode', 'categories'], (r) => {
+  if (r.categories && r.categories.length) allCategories = r.categories;
   allShortcuts = r.shortcuts || [];
   if (r.darkMode) applyDark(true);
   applyFilter();
@@ -86,8 +89,13 @@ function applyFilter() {
         sc.text.toLowerCase().includes(searchQuery))
     : [...allShortcuts];
 
-if (currentSort === 'az') filtered.sort((a, b) => a.shortcut.localeCompare(b.shortcut));
-  else if (currentSort === 'za') filtered.sort((a, b) => b.shortcut.localeCompare(a.shortcut));
+  if (activeCategory !== 'all') {
+    filtered = filtered.filter(sc => (sc.category || 'General') === activeCategory);
+  }
+
+if (currentSort === 'az')   filtered.sort((a, b) => a.shortcut.localeCompare(b.shortcut));
+  else if (currentSort === 'za')   filtered.sort((a, b) => b.shortcut.localeCompare(a.shortcut));
+  else if (currentSort === 'uses') filtered.sort((a, b) => (b.uses || 0) - (a.uses || 0));
 
   if (showDupsOnly) {
     const textCount = {};
@@ -107,9 +115,137 @@ if (currentSort === 'az') filtered.sort((a, b) => a.shortcut.localeCompare(b.sho
     statsFiltered.style.display = 'none';
   }
 
-  renderPage();
+renderPage();
   renderPagination();
   renderHints();
+  renderCategories();
+}
+
+// Inicializar dropdown de categoría UNA sola vez
+const categorySelectTrigger  = $('categorySelectTrigger');
+const categorySelectDropdown = $('categorySelectDropdown');
+const categorySelectBox      = $('categorySelect');
+const categorySelectLabel    = $('categorySelectLabel');
+const inputCategoryHidden    = $('inputCategory');
+
+categorySelectTrigger.addEventListener('click', (e) => {
+  e.stopPropagation();
+  categorySelectBox.classList.toggle('open');
+});
+
+document.addEventListener('click', () => {
+  categorySelectBox.classList.remove('open');
+});
+
+function populateCategorySelect(selected) {
+  const current = selected || inputCategoryHidden.value || 'General';
+  inputCategoryHidden.value    = current;
+  categorySelectLabel.textContent = current;
+
+  categorySelectDropdown.innerHTML = allCategories.map(c => `
+    <div class="custom-select-option ${c.name === current ? 'selected' : ''}" data-value="${c.name}">
+      ${c.name}
+    </div>
+  `).join('');
+
+  categorySelectDropdown.querySelectorAll('.custom-select-option').forEach(opt => {
+    opt.addEventListener('click', (e) => {
+      e.stopPropagation();
+      inputCategoryHidden.value       = opt.dataset.value;
+      categorySelectLabel.textContent = opt.dataset.value;
+      categorySelectDropdown.querySelectorAll('.custom-select-option').forEach(o => o.classList.remove('selected'));
+      opt.classList.add('selected');
+      categorySelectBox.classList.remove('open');
+    });
+  });
+}
+
+function saveCategories() {
+  chrome.storage.sync.set({ categories: allCategories });
+}
+
+function loadCategories(cb) {
+  chrome.storage.sync.get('categories', r => {
+    if (r.categories && r.categories.length) allCategories = r.categories;
+    if (cb) cb();
+  });
+}
+
+function renderCatManager() {
+  const el = $('catManagerList');
+  if (!el) return;
+  el.innerHTML = allCategories.map((c, i) => `
+    <div class="cat-manager-row">
+      <span>${c.name}</span>
+      <small>${c.desc || ''}</small>
+      ${c.name !== 'General' ? `<button class="btn-cat-del" data-i="${i}" title="Eliminar"><i class="fa-solid fa-trash"></i></button>` : ''}
+    </div>
+  `).join('');
+  el.querySelectorAll('.btn-cat-del').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const idx = +btn.dataset.i;
+      const cat = allCategories[idx].name;
+      allCategories.splice(idx, 1);
+      allShortcuts.forEach(sc => { if ((sc.category || 'General') === cat) sc.category = 'General'; });
+      saveCategories();
+      persist();
+      renderCatManager();
+      renderCategories();
+    });
+  });
+}
+
+function openCatModal() {
+  $('inputCatName').value = '';
+  renderCatManager();
+  openModal($('catOverlay'));
+}
+
+$('btnNewCategory').addEventListener('click', openCatModal);
+$('btnCloseCat').addEventListener('click', () => closeModal($('catOverlay')));
+
+$('btnSaveCat').addEventListener('click', () => {
+  const name = $('inputCatName').value.trim().replace(/\b\w/g, l => l.toUpperCase());
+  if (!name) return;
+  if (allCategories.some(c => c.name.toLowerCase() === name.toLowerCase())) {
+    showToast(`La categoría "${name}" ya existe`);
+    return;
+  }
+  allCategories.push({ name, desc: '' });
+  allCategories.sort((a, b) => a.name === 'General' ? -1 : b.name === 'General' ? 1 : a.name.localeCompare(b.name));
+  saveCategories();
+  $('inputCatName').value = '';
+  renderCatManager();
+  renderCategories();
+  showToast(`Categoría "${name}" creada ✓`);
+});
+
+function renderCategories() {
+  const counts = { all: allShortcuts.length };
+  allShortcuts.forEach(sc => {
+    const cat = sc.category || 'General';
+    counts[cat] = (counts[cat] || 0) + 1;
+  });
+  const cats = Object.keys(counts).filter(k => k !== 'all').sort();
+  const el = $('categoryList');
+  if (!el) return;
+  el.innerHTML = `
+    <button class="cat-btn ${activeCategory === 'all' ? 'active' : ''}" data-cat="all">
+      <i class="fa-solid fa-layer-group"></i> Todos <span class="cat-count">${counts.all}</span>
+    </button>
+    ${cats.map(cat => `
+      <button class="cat-btn ${activeCategory === cat ? 'active' : ''}" data-cat="${cat}">
+        <i class="fa-solid fa-tag"></i> ${cat} <span class="cat-count">${counts[cat]}</span>
+      </button>
+    `).join('')}
+  `;
+  el.querySelectorAll('.cat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeCategory = btn.dataset.cat;
+      currentPage = 1;
+      applyFilter();
+    });
+  });
 }
 
 // ── Render list ───────────────────────────────────────────────────────────────
@@ -146,7 +282,10 @@ function renderPage() {
     const row = document.createElement('div');
     row.className = 'sc-row';
     row.innerHTML = `
-      <div class="sc-trigger">${hl(sc.shortcut, searchQuery)}</div>
+      <div class="sc-trigger">
+        ${hl(sc.shortcut, searchQuery)}
+        ${sc.category && sc.category !== 'General' ? `<span class="sc-cat-badge">${sc.category}</span>` : ''}
+      </div>
       <div class="sc-text">${hl(sc.text.replace(/\n/g, ' ↵ '), searchQuery)}</div>
       <div class="sc-actions">
         <button class="action-btn edit" data-id="${sc.id}" title="Editar">
@@ -223,11 +362,16 @@ testArea.addEventListener('input', () => {
   const pos    = testArea.selectionStart;
   const before = testArea.value.substring(0, pos);
   for (const sc of allShortcuts) {
-    if (!sc.shortcut || !sc.text) continue;
+    if (!sc.uses) sc.uses = 0;    if (!sc.shortcut || !sc.text) continue;
     if (before.endsWith(sc.shortcut)) {
       const after  = testArea.value.substring(pos);
-      const newVal = before.slice(0, -sc.shortcut.length) + sc.text + after;
-      testArea.value = newVal;
+      const expanded = sc.text;
+      const newVal = before.slice(0, -sc.shortcut.length) + expanded + after;
+      sc.uses = (sc.uses || 0) + 1;
+      persist();
+      const setter = Object.getOwnPropertyDescriptor(HTMLTextAreaElement.prototype, 'value')?.set;
+      if (setter) setter.call(testArea, newVal);
+      else testArea.value = newVal;
       const newPos = pos - sc.shortcut.length + sc.text.length;
       testArea.setSelectionRange(newPos, newPos);
       return;
@@ -244,8 +388,10 @@ btnClearTest.addEventListener('click', () => {
 btnNew.addEventListener('click', () => {
   editingId = null;
   modalTitle.textContent = 'Nuevo shortcut';
-  inputShortcut.value = '';
-  inputText.value     = '';
+  inputShortcut.value       = '';
+  inputText.value           = '';
+  $('inputCategory').value  = '';
+  populateCategorySelect();
   charCount.textContent = '0';
   openModal(modalOverlay);
   setTimeout(() => inputShortcut.focus(), 80);
@@ -256,8 +402,10 @@ function openEdit(id) {
   if (!sc) return;
   editingId = id;
   modalTitle.textContent  = 'Editar shortcut';
-  inputShortcut.value     = sc.shortcut;
-  inputText.value         = sc.text;
+  inputShortcut.value       = sc.shortcut;
+  inputText.value           = sc.text;
+  $('inputCategory').value  = sc.category || 'General';
+  populateCategorySelect();
   charCount.textContent   = sc.text.length;
   openModal(modalOverlay);
   setTimeout(() => inputShortcut.focus(), 80);
@@ -273,6 +421,7 @@ inputShortcut.addEventListener('keydown', e => { if (e.key==='Enter') saveShortc
 function saveShortcut() {
   const shortcut = inputShortcut.value.trim();
   const text     = inputText.value.trim();
+  const category = ($('inputCategory').value.trim() || 'General').replace(/\b\w/g, l => l.toUpperCase());
 
   if (!shortcut) { shake(inputShortcut); inputShortcut.focus(); return; }
   if (!text)     { shake(inputText);     inputText.focus();     return; }
@@ -282,9 +431,9 @@ function saveShortcut() {
 
   if (editingId !== null) {
     const idx = allShortcuts.findIndex(sc => String(sc.id) === String(editingId));
-    if (idx !== -1) allShortcuts[idx] = { ...allShortcuts[idx], shortcut, text };
+    if (idx !== -1) allShortcuts[idx] = { ...allShortcuts[idx], shortcut, text, category };
   } else {
-    allShortcuts.push({ id: String(Date.now()), shortcut, text });
+    allShortcuts.push({ id: String(Date.now()), shortcut, text, category, uses: 0 });
   }
 
   persist(() => {
@@ -387,7 +536,7 @@ $('btnDeleteAllFinal').addEventListener('click', () => {
 // ── Export ────────────────────────────────────────────────────────────────────
 btnExport.addEventListener('click', () => {
   const blob = new Blob(
-    [JSON.stringify({ version: 1, shortcuts: allShortcuts }, null, 2)],
+    [JSON.stringify({ version: 1, shortcuts: allShortcuts, categories: allCategories }, null, 2)],
     { type: 'application/json' }
   );
   const url = URL.createObjectURL(blob);
@@ -398,6 +547,18 @@ btnExport.addEventListener('click', () => {
   a.click();
   URL.revokeObjectURL(url);
   showToast(`${allShortcuts.length} shortcuts exportados ✓`);
+});
+
+// ── Shortcut / para búsqueda ──────────────────────────────────────────────────
+document.addEventListener('keydown', e => {
+  if (e.key === '/' && document.activeElement !== searchInput &&
+      !document.activeElement.closest('.modal-overlay') &&
+      !document.activeElement.closest('textarea') &&
+      !document.activeElement.closest('input')) {
+    e.preventDefault();
+    searchInput.focus();
+  }
+  if (e.key === 'Escape') searchInput.blur();
 });
 
 // ── Sort & Filtros ────────────────────────────────────────────────────────────
@@ -452,6 +613,23 @@ function processFile(file) {
           raw = parsed;
         } else if (parsed.shortcuts && Array.isArray(parsed.shortcuts)) {
           raw = parsed.shortcuts;
+          if (parsed.categories && Array.isArray(parsed.categories)) {
+            parsed.categories.forEach(c => {
+              if (!allCategories.some(e => e.name.toLowerCase() === c.name.toLowerCase())) {
+                allCategories.push(c);
+              }
+            });
+          }
+          // Auto-crear categorías desde el campo category de cada shortcut
+          raw.forEach(sc => {
+            const cat = sc.category;
+            if (cat && cat !== 'General' && !allCategories.some(e => e.name.toLowerCase() === cat.toLowerCase())) {
+              allCategories.push({ name: cat, desc: '' });
+            }
+          });
+          allCategories.sort((a, b) => a.name === 'General' ? -1 : b.name === 'General' ? 1 : a.name.localeCompare(b.name));
+          saveCategories();
+          renderCategories();
         } else if (typeof parsed === 'object' && parsed !== null) {
           const values = Object.values(parsed);
           if (values.length && typeof values[0] === 'object' && values[0].trigger) {
@@ -499,6 +677,8 @@ function processFile(file) {
         id: String(Date.now() + Math.random()),
         shortcut: String(sc.shortcut).trim(),
         text: String(sc.text),
+        category: sc.category || 'General',
+        uses: sc.uses || 0,
       }));
 
       if (!valid.length) throw new Error('Sin shortcuts válidos en el archivo');
@@ -610,6 +790,8 @@ btnDark.addEventListener('click', () => {
 
 function applyDark(on) {
   document.body.classList.toggle('dark', on);
+  const logo = document.querySelector('.brand-icon img');
+  if (logo) logo.src = on ? '../icons/logo-dark.png' : '../icons/logo-light.png';
   btnDark.innerHTML = on
     ? '<i class="fa-solid fa-sun"></i><span>Tema</span>'
     : '<i class="fa-solid fa-moon"></i><span>Tema</span>';

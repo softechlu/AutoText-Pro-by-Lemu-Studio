@@ -22,6 +22,18 @@ chrome.runtime.onInstalled.addListener(async (details) => {
   }
 });
 
+// Increment uses counter from content script
+chrome.runtime.onMessage.addListener((msg) => {
+  if (msg.type !== 'INCREMENT_USES') return;
+  chrome.storage.sync.get(['shortcuts'], (r) => {
+    const shortcuts = Array.isArray(r.shortcuts) ? r.shortcuts : [];
+    const sc = shortcuts.find(s => String(s.id) === String(msg.shortcutId));
+    if (!sc) return;
+    sc.uses = (sc.uses || 0) + 1;
+    chrome.storage.sync.set({ shortcuts });
+  });
+});
+
 // Open options page when toolbar icon is clicked
 chrome.action.onClicked.addListener(() => {
   chrome.runtime.openOptionsPage();
