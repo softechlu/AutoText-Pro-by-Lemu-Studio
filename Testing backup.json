@@ -1,0 +1,1300 @@
+{
+  "version": 1,
+  "shortcuts": [
+    {
+      "id": "1782090327795.055",
+      "shortcut": ".7",
+      "text": "dasdasd\ndadad\nasdas\ndasd\nad\nasd\na",
+      "category": "Prueba",
+      "uses": 1
+    },
+    {
+      "id": "1782090327795.057",
+      "shortcut": ".6",
+      "text": "dasdasda",
+      "category": "Account Recovery",
+      "uses": 0
+    },
+    {
+      "id": "1782090327795.134",
+      "shortcut": ".dad",
+      "text": "45217854",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090327795.2122",
+      "shortcut": ".pruebaII",
+      "text": "4542124842",
+      "category": "Fran",
+      "uses": 0
+    },
+    {
+      "id": "1782090327795.292",
+      "shortcut": "cml",
+      "text": "call me later",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090327795.3047",
+      "shortcut": "e@",
+      "text": "email.me@johnwick.com",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090327795.4438",
+      "shortcut": ",4",
+      "text": "Prueba\nPrueba\nPrueba\n \n\nSodff: fafdasda\ndadada\ndasd\nasdasdasd\n\na\nsdasda\n\n\nsda",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090327795.5366",
+      "shortcut": ".hola",
+      "text": "45217854",
+      "category": "Prueba",
+      "uses": 0
+    },
+    {
+      "id": "1782090327795.5725",
+      "shortcut": "hpny",
+      "text": "happy new year!",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090327795.6584",
+      "shortcut": ".2",
+      "text": "dadasdasd",
+      "category": "Account Recovery",
+      "uses": 2
+    },
+    {
+      "id": "1782090327795.7017",
+      "shortcut": "*tel",
+      "text": "3001234567",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090327795.7766",
+      "shortcut": ".dasda",
+      "text": "dasdasd",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090327795.8396",
+      "shortcut": ".5",
+      "text": "4542545",
+      "category": "Account Recovery",
+      "uses": 1
+    },
+    {
+      "id": "1782090327795.9333",
+      "shortcut": ".1",
+      "text": "Prueba.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345541.5964",
+      "shortcut": ".yellow",
+      "text": "Reject reason: Yellow risk without matches",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0051",
+      "shortcut": ".mish",
+      "text": "Native PT/ES Speaker | Lemu\n\nMishandle towards player\nImpact: Low\nCompensation: None\nReason:",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.012",
+      "shortcut": ".rucreq",
+      "text": "Здравствуйте!\n\nСпасибо, что написали нам.\n\nМы заметили подозрительную активность в учетной записи, из которой вы к нам обратились. Чтобы мы могли помочь вам с другой учетной записью, вам следует написать нам из учетной записи, которая не была скомпрометирована. Пожалуйста, отправьте новый запрос из учетной записи, в которой никогда не было никаких подозрительных действий.\n\nЕсли хотите, мы также поможем вам обеспечить безопасность учетной записи, из которой вы нам сейчас пишете. Как бы вы хотели поступить дальше?\n\nЖдем вашего ответа.\n\nС уважением,",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.014",
+      "shortcut": ".pnbrawl",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Missing brawlers and cosmetics due to the \"#Randombs\" event \nBug: No, Supercell added this feature during the event; some Brawlers were \"banned.\" \nSolution/NS: Informing accordingly ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.019",
+      "shortcut": ".pnvc",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player did not receive verification codes (Email), since the account doesn't show any recent access\nCA: No\nSCID Linked: yes\nSolution/NS: Send instructions",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0222",
+      "shortcut": ".ia",
+      "text": "Informing accordingly",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.024",
+      "shortcut": ".pnunclear",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Unclear \nSolution/NS: Asking for more information",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.032",
+      "shortcut": ".pnra",
+      "text": "Recent access | Informing accordingly",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0388",
+      "shortcut": ".pnap",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player wants to enable the account protection | Generic question about AP\nCA?: No\nPhiPhi: No\nRecent device: No\nSolution/NS: Informing accordingly",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0442",
+      "shortcut": ".cnx",
+      "text": "Native PT/ES Speaker\nCNX | Second Opinion Backlog",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.046",
+      "shortcut": ".gf",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Refund request (GF)\nInvestigation results:  The account shows multiple currencies | Undervaluated \nReason: Gem Fraud\nTransaction ID:\t\nCharged\nConclusion/next step: Deny",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0488",
+      "shortcut": ".pnsi",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is asking for the account's specific information\nCA: No\nSolution/NS: Deny",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0522",
+      "shortcut": ".frcreq",
+      "text": "Bonjour, \n\nMerci de nous avoir contactés.\n\nNous avons remarqué une activité suspecte sur le compte à partir duquel vous nous avez contactés. Afin de vous aider avec l'autre compte, nous devons nous assurer que le compte à partir duquel vous nous contactez n'a jamais été piraté. Veuillez soumettre une nouvelle demande à partir d'un compte existant ou nouveau qui n'a fait l'objet d'aucune activité suspecte.\n\nSi vous le souhaitez, nous pouvons également vous aider à sécuriser le compte à partir duquel vous nous contactez actuellement. Quelle option préférez-vous choisir ?\n\nNous avons hâte de recevoir votre réponse.\n\nÀ bientôt !",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0613",
+      "shortcut": ".cif",
+      "text": "Update CIF and send to the check BOT",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.073",
+      "shortcut": ".bbpass",
+      "text": "Native PT/ES Speaker | Lemu\n\nPlayer complains about being unable to purchase the Boom Pass\nAs per Slack internal instruction https://supercellol.slack.com/archives/CEPR7LTRD/p1776266078233189\nThe Boom Pass purchase has been disabled in Brazil due to their new regulations. Here's SC official statement: https://supercell.com/en/news/brazil-update/\nFor now, let's exclusively thank the players for the reports.\nI will inform accordingly\nthe SC official statement: is only available in EN - So, I will apologize and explain to the player and suggest using some translation tool",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0752",
+      "shortcut": ".sb",
+      "text": "Hello there, here's Juan  \n\nThank you for contacting us!  \n\nWe would like to inform you that it is no longer possible to transfer purchases from Squad Busters to any other Supercell games. This option was available only until December 31, 2025, and after that date transfers are no longer supported. We sincerely thank you for having played Squad Busters and, above all, for continuing to be part of the Supercell community. Your support means a lot to us.  \n\nHope that helps.  \n\nBest regards, Juan  ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0815",
+      "shortcut": ".dup",
+      "text": "Native PT/ES Speaker | Lemu\n\nDuplicate interaction\nHandling in this ticket:\nIssue:",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0818",
+      "shortcut": ".hdoffer",
+      "text": "Hi, I'm Juan.\n\nThank you for contacting us!\n\n\nTo continue resolving your billing issue in Hay Day, we need you to provide the following:\n\nInformation about your purchase details to confirm it: Here's a list of the items purchased and their quantities, for example:\n\n• Diamonds x100\n• Coins x50,000\n• Boosters x3\n• Decorations x1\n\nAdditionally, we need to locate your order in our system. Please send us a copy of the purchase receipt or the transaction ID number. You can find this information in the following ways:\n\n• Open the email account used for the purchase and look in your inbox for \"Your Google Play Order Receipt.\"\n\n• Select the relevant order on the Google Payments transaction page. The transaction ID usually follows one of these formats:\n• GPB.123456789012345\n• GPA.1234-5678-9012-34567\n\nThank you very much for your cooperation and understanding.\n\nI hope this is helpful.\n\nBest regards, Juan",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0852",
+      "shortcut": ".endata",
+      "text": "Hello Player, this is Juan from Supercell.\n\nThank you for contacting us.\n\nTo help you with your account recovery or verification request, we need some important information to properly identify your account. Please include the following information in your reply:\n\n- Exact account name as it appears in the game\n- Player tag (for example, #ABC123XYZ)\n- Current trophy count (only for Clash of Clans, Clash Royale, or Brawl Stars)\n- Experience level (only for Boom Beach or Hay Day)\n- Previous email address linked to the account or one you remember using\n- Screenshots clearly showing the account name and tag\n- If you made purchases on the account, please attach a screenshot of the receipt or proof of payment.\n\nWith this information, we can review your case more accurately. We appreciate your cooperation and patience while we work to help you.\n\nJuan from Supercell",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0964",
+      "shortcut": ".pnfree",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is requesting free items, since this is not possible\nSolution/NS: Deny request",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.0986",
+      "shortcut": ".gating",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Age issue | Kickout | HD Age-Gating Issue - Player complain about being removed from Neighborhoods due to age-gating\nCreation date older than account age: No\nIncorrect conversion by support: No\nThe account is 3 years or under: No\nEligible for recovery (in case of compromise): Yes\nConclusion: ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1028",
+      "shortcut": ".gdprun",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: \nGDPR Supported: No\nSolution/NS: Reject",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1077",
+      "shortcut": ".olp",
+      "text": "overlapping sessions/playtime",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1099",
+      "shortcut": ".ruclose",
+      "text": "Здравствуйте, это Хуан.\n\nСпасибо, что связались с нами!\n\nМы закрываем этот запрос.\n\nЕсли вам снова понадобится Поддержка, пожалуйста, обращайтесь к нам в любое время.\n\nНадеемся, это поможет.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1106",
+      "shortcut": ".pnref",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Refund request \nAccount link (Only if it was made on another account):\nInvestigation results: \nReason: Mistaken purchase\nTransaction ID: Pending\nConclusion/next step: Ask for a valid receipt",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1184",
+      "shortcut": ".esinc",
+      "text": "Hola jugador, soy Juan de Supercell\n\nGracias por tu mensaje.\n\nSintiéndolo mucho, no hemos podido confirmar tu titularidad de esta cuenta, por lo que no podemos recuperarla.\n\nSin embargo, puedes probar los siguientes pasos para intentar recuperar el acceso:\n\nSi usabas un dispositivo Apple Te recomendamos contactar con el soporte oficial de Apple para la recuperación de cuentas: https://support.apple.com/es-es/HT201232\n\nSi usabas una cuenta de Google Puedes acceder al soporte de recuperación de cuentas de Google desde el siguiente enlace: https://support.google.com/accounts/answer/7682439?hl=es\n\nSi aún tienes acceso a un dispositivo más antiguo, Por favor, intenta contactarnos desde ese dispositivo. Esto puede ayudarnos a verificar tu información de forma más precisa.\n\nSi tienes otra cuenta con la que jugaste al mismo tiempo Te pedimos que nos contactes desde esa cuenta. Esto puede facilitar el proceso de verificación y ayudarnos a entender mejor tu situación.\n\nGracias por tu comprensión.\n\n¡Saludos!",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1238",
+      "shortcut": ".esdata",
+      "text": "Hola, soy Juan de Supercell.\n\nGracias por contactarnos.\n\nPara ayudarte con la recuperación o verificación de tu cuenta, necesitamos información importante para identificarla correctamente. Por favor, incluye la siguiente información en tu respuesta:\n\n- Nombre exacto de la cuenta tal como aparece en el juego\n\n- Etiqueta de jugador (por ejemplo, #ABC123XYZ)\n\n- Número actual de trofeos (solo para Clash of Clans, Clash Royale o Brawl Stars)\n\n- Nivel de experiencia (solo para Boom Beach o Hay Day)\n\n- Dirección de correo electrónico anterior vinculada a la cuenta o una que recuerdes haber usado\n\n- Capturas de pantalla que muestren claramente el nombre y la etiqueta de la cuenta\n\n- Si realizaste compras con la cuenta, adjunta una captura de pantalla del recibo o comprobante de pago.\n\nCon esta información, podremos revisar tu caso con mayor precisión. Agradecemos tu cooperación y paciencia mientras trabajamos para ayudarte.\n\nJuan de Supercell",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1301",
+      "shortcut": ".u13",
+      "text": "Important note: I will not take U13 actions under the RA because the player mentioned, \"I'm a legal tutor,\" and the player is using the BOT's option and the account is regular",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.132",
+      "shortcut": ".3taf",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Lost Account\nID: pending\nRA-CA?: No\nNext Step: Since it was not possible to find the TA with the player's information.\nDeny: 2nd Reply",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1367",
+      "shortcut": ".pngp",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is complaining about the regional pricing and the discrepancies from the store\nSolution/NS: Educate the player about regional pricing",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1382",
+      "shortcut": ".2trans",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player wants to transfer the account to another target SCID \nCompromised account: No\n14-day device rule: Pass\nPhiPhi: No\nEligibility outcome and Compromise sessions (Only if the account is compromised): Eligible (No CA)\nSolution/NS: Asking for the target email",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.142",
+      "shortcut": ".pncreq",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: CA Recovery \nEligibility outcome (CA Previous Recovery): Eligible\nRA CA?: yes\nNS: Ask to secure the RA account first",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1548",
+      "shortcut": ".pninc",
+      "text": "Support Notes: Not Relevant\nParallel Account Relation: Nothing found\nSCID Events: All clean\nSystematic Phishing Identified:No\nOther issues from requester: no\nOther claimants: No\nPhishing bans on related accounts:\nNotable account: no\nNote(s) about devices: no\nHS/Pandora countries:\nIP Addresses: No\nEligibility Check for RA and/or TA: Eligible\n\nThe checklist steps were all reviewed to determine if the player is the TA's owner or not\n\nDevices matching: No\nIP's: \nBA:\nPoint 2: no related names or other game accounts\nTransactions: No\n\nTA in CIF Updated?: Yes\nTier in CIF Updated?: Yes\nFAQ Language matches Player Message's Language?: Yes\n\nConclusion/next step: Inconclusive",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1587",
+      "shortcut": ".pnhr",
+      "text": "Native PT/ES Speaker | Lemu\n\nHigh Risk: No\nIssue related to: Disruptive behavior\nSuicide|Harassment, etc... related: No\nTicket active: No\nNeed to be escalated: No\nNS: Close ticket",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.159",
+      "shortcut": ".3rev",
+      "text": "Accidentally spent Diamonds (revoked) - [item revoked] - Design Festival\"",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1628",
+      "shortcut": ".pnna",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is complaining about not being able to access the game from a different account because a deletion is in progress.\nSolution/NS: Send instructions\nAccount under deletion: RA",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.168",
+      "shortcut": ".rss",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is complaining about the roadside shop ban\nMarked as BOT: Yes\nSolution/NS: Informing accordingly",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.173",
+      "shortcut": ".phish",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is using a phishing template\nSolution/NS: Reject as phishing",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.178",
+      "shortcut": ".2buffie",
+      "text": "Hello there, here's Juan\n\nThank you for contacting us!\n\nWe would like to kindly inform you that the rewards related to the Buffies will be progressively unlocked as you continue unlocking the Buffie corresponding to each Brawler. In addition, you should have already received exactly the rewards for the Brawlers in which you owned the Mythic Gadget, whether that was Spike or Mortis. Please rest assured that the system is designed to grant those rewards accurately. If you have any further questions or need additional assistance, you are always welcome to reach out to us again.\n\nHope that helps.\n\nBest regards, Juan",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1829",
+      "shortcut": ".bd",
+      "text": " I agree with the BOT's decision to recover the account without human interaction",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.1987",
+      "shortcut": ".enjuan",
+      "text": "player, this is Juan from Supercell\n\nThanks for contacting us",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2043",
+      "shortcut": ".derea",
+      "text": "Hallo!\n\nDanke für deine Nachricht!\n\nNach einer gründlichen Untersuchung muss ich dich zunächst an einen Bot weiterleiten, der dich zum nächsten Prozess führt. Bitte befolge alle Anweisungen.\n\nKeine Sorge! Wenn während des Prozesses etwas schiefgeht, bin ich hier, um zu übernehmen und mich um deinen Fall zu kümmern.\n\nBitte beachte, dass du möglicherweise eine neue Unterhaltung mit uns beginnen musst, damit wir dir mit der ursprünglichen Anfrage weiterhelfen können.\n\nVielen Dank und einen schönen Tag!\n\nViele Grüße",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2146",
+      "shortcut": ".rej",
+      "text": "Native PT/ES Speaker\nCNX | Second Opinion Backlog\n\nValid escalation\nRationale: : The AR is claiming low-level accounts in order to generate a pattern and on device accounts to be able to steal high-level accounts once it creates hooks within them.\n\nRT: \n\nNS: Reject | Phishing pattern",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2239",
+      "shortcut": ".gdprdc",
+      "text": "Native PT/ES Speaker | Lemu\n\nIs the request related to GDPR?: Yes\nIs the player contacting us from the Target Account?: Yes\nHas the ticket gone through the GDPR Cancellation BOT?: yes\nWas the cancellation request made during the 14 days (4 days for KR) following the initial deletion request? - yes\nIs the Target account compromised? - no\nDoes it meet escalation the criteria? - no\nConclusion: Perform the Cancel Deletion",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2334",
+      "shortcut": ".pnager",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Age change request\nCreation date older than account age: No\nIncorrect conversion by support: No\nThe account is 3 years or under: No\nGDPR Art. 16 Invoked: Yes\nCA: No\nEligible for recovery (in case of compromise): Yes\nConclusion: ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2375",
+      "shortcut": ".off",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is being offensive towards support\nSolution/NS: Educating the player",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2385",
+      "shortcut": ".pndisru",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Disruptive behavior/disruptive name\nEvidence needed: No\nNeed to be escalated: No\nHigh Risk: No\nTA:\nNS: ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2405",
+      "shortcut": ".pnskin",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Skin Refund Request\nSkin name: \nPrevious skin refunds: No\nPurchase made with in-game resources: Yes\nType (Gems, Blings or Coins?): \nAmount: \nInvestigation: \nGachas included:\nSolution/NS: Escalate to the GM's ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2493",
+      "shortcut": ".enrea",
+      "text": "Hey there, this is Juan\n\nThanks for getting in touch!\n\nAfter performing a careful investigation, I need to redirect you to the bot that will guide you to the next process, please follow all the instructions accordingly.\n\nDon’t worry! If something goes wrong during the process, I'll be here ready to continue and take care of your case.\n\nPlease note that you may need to send us a new conversation so that we can assist you on the original request.\n\nThank you and have a great day!\n\nRegards, Juan",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2754",
+      "shortcut": ".pnss",
+      "text": "Native Speaker of PT/ES | Lemu\n\nIssue: SCID Email Change\nUnable to change SCID autonomously: no\nContacting Device: More than 14 days in the account\nPhi Phi blocked: No\nRA and other game accounts connected to the same SC ID compromised: no\nEligibility outcome and Compromise sessions (Only if the account is compromised): Eligible (No CA)\nAccount Notable (SH, HV, CLvl10): No\nRationale: Player meets all the criteria mentioned above for SCID Email Change, nothing suspicious, events clean\n\nTA in CIF Updated?: Yes\nTier in CIF Updated?: Yes\nFAQ Language matches Player Message's Language?: Yes\n\nNext Step: Self Service Email Change",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2766",
+      "shortcut": ".pnmd",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player wants to transfer the account to another device\nSolution/NS: Informing accordingly\nSCID Linked: Yes\nCA: No\nPhiPhi: No",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2776",
+      "shortcut": ".enginc",
+      "text": "Hello player, this is Juan from Supercell\n\nThank you for your message.\n\nUnfortunately, we have not been able to confirm ownership of this account, so we are unable to recover it at this time.\n\nHowever, you may try the following steps to regain access:\n\nIf you were using an Apple device We recommend contacting Apple Support for account recovery: [https://support.apple.com/en-us/HT201232](https://support.apple.com/en-us/HT201232)\n\nIf you were using a Google account You can access Google’s account recovery support here: [https://support.google.com/accounts/answer/7682439?hl=en](https://support.google.com/accounts/answer/7682439?hl=en)\n\nIf you still have access to an older device Please try reaching out to us from that device. This may help us verify your information more accurately.\n\nIf you have another account you played with at the same time Please contact us from that account. This can help us better understand your situation and assist with verification.\n\nThank you for your understanding.\n\nBest regards!",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.283",
+      "shortcut": ".only",
+      "text": "I confirm ownership by highlighting that the device originally used to create the account is the same device now contacting us. This direct match between the creation device and the current activity provides strong evidence of legitimate ownership.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2844",
+      "shortcut": ".2data",
+      "text": "Native PT/ES Speaker | Lemu\n\nGDPR Data Request \nEligible in Pandora: Not yet\nCA: no\nSCID Attached?: No\nConclusion/next step: Ask to attach an email to create an SCID and provide the data\n\nDeny reason: None",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.294",
+      "shortcut": ".2pnsc",
+      "text": "Native PT/ES Speaker | Lemu\n\nSCID Creation\nGuest Account\nAs per General rules of SCID: As SC ID Guest Accounts are not linked to an email, the self-service features are not available for them.\nIs the account’s local country China? No\nNo compromised\nNo suspicions that the player is trying to use the SCID SC ID creation for malicious purposes\nRequest a new email address from the player using FAQ example UP - SC ID - Request New Email Address.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2976",
+      "shortcut": ".nat",
+      "text": "Native PT/ES Speaker | Lemu",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.2986",
+      "shortcut": ".spam",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Unrelated to Supercell \nSolution/NS: Spam | Reject",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3003",
+      "shortcut": ".main",
+      "text": "Native PT/ES Speaker | Lemu\n\nReason to reassign: Not instructions yet to reassign\nStart time:  02/01/2026 06:00:15\nEnd time: 02/01/2026 06:20:14",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.303",
+      "shortcut": ".taf",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Lost Account\nAccount found: yes\nID: \nRA-CA?: No\nTA-CA?: No\nEligibility outcome (CA Previous Recovery): Eligible (Clean)\nNext Step: Update CIF and send to check BOT",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3071",
+      "shortcut": ".itcreq",
+      "text": "Ciao,\n\ngrazie per averci contattato!\n\nAbbiamo notato alcune attività sospette sull'account da cui ci hai contattato. Per poterti aiutare con l'altro account, dobbiamo assicurarci che quello da cui ci stai contattando al momento non sia mai stato compromesso, perciò ti chiediamo di inoltrare una nuova richiesta da un account nuovo o già esistente su cui non è stata rilevata alcuna attività sospetta.\n\nSe vuoi, possiamo aiutarti a rendere sicuro quello da cui ci stai contattando, perciò facci sapere come desideri procedere.\n\nRimaniamo in attesa di un tuo riscontro.\n\nSaluti.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3162",
+      "shortcut": ".arcreq",
+      "text": "مرحبًا،\n\nنشكرك على مراسلتنا.\n\nقبل أن نعالج استفسارك، نود إبلاغك بأننا رصدنا أنشطة مشبوهة في الحساب الذي تتواصل معنا من خلاله. لأسباب أمنية لا يمكننا المتابعة حتى نقوم بتأمين الحساب المخترق.\n\nهلا تؤكد ما إذا كان بإمكاننا المتابعة لتأمين الحساب المخترق الذي تتواصل معنا منه أم لا؟\n\nفي انتظار ردك.\n\nمع أطيب التحيات،",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3188",
+      "shortcut": ".2taf",
+      "text": "Native PT/ES Speaker | Lemu\n\nActions to take: Clean the CIF\n\nIssue: Lost Account\nID: pending\nRA-CA?: No\nNext Step: Since it was not possible to find the TA with the player's information, I will ask for detailed information",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3306",
+      "shortcut": ".mp",
+      "text": "Hello player, this is Juan from Supercell\n\nThank you for contacting us. \n\nWe've reviewed your case and confirmed that you were unable to claim the Mini P.E.K.K.A. because your account was below the 5,000 trophy requirement (Arena 15) at the start of the season.\n\nSeasonal rewards are only awarded to players who meet the criteria established at the beginning of each cycle, and in this case, it wasn't possible to enable the reward.\n\nWe encourage you to keep progressing in your matches to reach new arenas and earn rewards in the future.\n\nRegards, Juan from Supercell",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.333",
+      "shortcut": ".trad",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: CA | Recovery | Email change\nSolution/NS: Since the player stated that they bought or sold the account, the issue cannot be processed, and the interaction must be closed.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3337",
+      "shortcut": ".2pncreq",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: CA Recovery \nEligibility outcome (CA Previous Recovery): Eligible\nRA CA?: yes\nNS: Ask to secure the account first",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3503",
+      "shortcut": ".free",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is requesting free items, since this is not possible to maintain the fairness in the game\nSolution/NS: Deny",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3567",
+      "shortcut": ".inc",
+      "text": "The player was unable to provide a valid receipt, as this is the only current method to prove ownership of the account; therefore, the case remains inconclusive.\n\nNS: Inconclusive",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3625",
+      "shortcut": ".rurea",
+      "text": "Здравствуйте!\n\nСпасибо, что написали нам!\n\nМы внимательно изучили вашу ситуацию и решили перенаправить вас к боту, который подскажет, что дальше делать. Пожалуйста, в точности выполните все инструкции.\n\nНе переживайте! Если что-то пойдет не так, мы сможем вернуться и продолжить работу над вашим обращением.\n\nВнимание: вам может понадобиться создать новое обращение, чтобы мы могли помочь вам с вашим первоначальным вопросом.\n\nХорошего дня!\n\nС уважением,",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.37",
+      "shortcut": ".pn2sc",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: SCS Related - Cannot be handled by in-game or email feature \nSolution/NS: Web Help",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3792",
+      "shortcut": ".faq",
+      "text": "Hazme una FAQ con el siguiente formato (obviamente en el idioma correcto)\n\nHello there, here's Juan\n\nThank you for contacting us!\n\n(Info aqui)\n\nHope that helps.\n\nBest regards, Juan\n\ndonde siendo muy educado y convenciendo al jugador le digas que:\n\nNota: No uses emojis, no dividas por secciones, y no uses guiones\nImportante: Dame todo el mensaje en inglès pero si el texto que te doy es en otro idioma, lo sigues en ese idioma incluyendo la presentación dond ele digas que...",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3826",
+      "shortcut": ".ats",
+      "text": "Native PT/ES Speaker | Lemu\n\n*NOTE: Don't forget to update the CIF if RA<>TA*\n\nThe player agreed to secure the account\nNS: Investigation in progress\nCIF Updated: Yes",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3872",
+      "shortcut": ".unrelated",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Unrelated account \nSolution/NS: Since the player clarified that the account does not belong to them, and they does not intend to claim it, just know data about it, I will treat this case as an unrelated account",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.3938",
+      "shortcut": ".arrea",
+      "text": "مرحبًا،\n\nنشكرك على تواصلك معنا!\n\nبعد إجراء تحقيق دقيق، سيتعين عليّ توجيهك إلى الروبوت الذي سيرشدك إلى العملية التالية . يرجى اتباع جميع التعليمات وفقًا لذلك.\n\nلا داعي للقلق! إذا حدث خطأ ما أثناء العملية، فسنكون هنا على استعداد للمتابعة وتولي حالتك.\n\nتجدر الإشارة إلى أنه قد يتعين عليك إرسال محادثة جديدة إلينا لنتمكن من مساعدتك في الطلب الأساسي.\n\nشكرًا لك وطاب يومك!\n\nمع أطيب التحيات،",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.397",
+      "shortcut": ".itinc",
+      "text": "Ciao giocatore, sono Juan di Supercell\n\nGrazie per il tuo messaggio.\n\nPurtroppo non siamo riusciti a confermare la proprietà di questo account, quindi al momento non possiamo recuperarlo.\n\nTuttavia, puoi provare i seguenti passaggi per riottenere l’accesso:\n\nSe stavi usando un dispositivo Apple  \nTi consigliamo di contattare il Supporto Apple per il recupero dell’account: https://support.apple.com/it-it/HT201232\n\nSe stavi usando un account Google  \nPuoi accedere al supporto per il recupero dell’account Google qui: https://support.google.com/accounts/answer/7682439?hl=it\n\nSe hai ancora accesso a un vecchio dispositivo  \nTi invitiamo a contattarci da quel dispositivo. Questo potrebbe aiutarci a verificare le tue informazioni in modo più accurato.\n\nSe hai un altro account con cui giocavi contemporaneamente  \nTi chiediamo di contattarci da quell’account. Questo ci aiuterà a comprendere meglio la tua situazione e a supportarti nella verifica.\n\nGrazie per la tua comprensione.\n\nCordiali saluti!",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4006",
+      "shortcut": ".foll",
+      "text": "Native PT/ES Speaker | Lemu\n\nFollow reason: Wrong language/resolution\nNote: Requested to the nearest TM\nBOT Needed: No\nMishandle towards player\nImpact: Low\nCompensation: None",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4075",
+      "shortcut": ".ns",
+      "text": "Native PT/ES Speaker | Lemu\n\nReason to reassign the ticket: Not upskilled in this game\nBOT Gameplay used: No\nNS: Reassigning to the BOT Gameplay",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4084",
+      "shortcut": ".esrea",
+      "text": "Hola jugador, soy Juan de Supercell\n\nGracias por contactar con nosotros.\n\nTras llevar a cabo una investigación exhaustiva, debemos redirigirte a una conversación con un bot que te guiará en el siguiente proceso; sigue las instrucciones dadas.\n\n¡No te preocupes! Si algo no sale bien durante el proceso, estaremos aquí para seguir encargándonos de tu caso.\n\nTen en cuenta que quizá debas enviarnos una conversación nueva para que podamos ayudarte con la solicitud original.\n\n¡Gracias y que pases un buen día!\n\n¡Saludos!",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4106",
+      "shortcut": ".empty",
+      "text": " Native PT/ES Speaker | Lemu\n\nIssue: Unclear (Empty)\nSolution/NS: Educate the player and ask for information",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.424",
+      "shortcut": ".pnlang",
+      "text": "Native PT/ES Speaker | Lemu\n\nQueue Lang: \nPlayer's last message language:\nNS: Updating CIF",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.428",
+      "shortcut": ".res",
+      "text": "Research Log | Article “article name”, Time expended | 11 minutes | Special Action: \"Special action if exists\"\n\nContent...\n\ncon este formato compleate con la info anterior de que parendi esto, sé resumido en total",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4297",
+      "shortcut": ".decreq",
+      "text": "Hallo!\n\nVielen Dank für deine Nachricht.\n\nWir haben verdächtige Aktivitäten auf dem Konto festgestellt, von dem aus du uns kontaktiert hast. Damit wir dir mit dem anderen Spielkonto helfen können, müssen wir sicherstellen, dass das Konto, mit dem du uns kontaktierst, nicht gefährdet ist. Bitte schicke uns eine neue Anfrage von einem bestehenden oder neuen Spielkonto, das keine verdächtigen Aktivitäten aufweist.\n\nWenn du möchtest, können wir dir auch dabei behilflich sein, die Sicherheit des Spielkontos zu gewährleisten, von dem aus du uns aktuell kontaktierst. Wie möchtest du fortfahren?\n\nIch freue mich darauf, wieder von dir zu hören.\n\nViele Grüße",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4436",
+      "shortcut": ".pn67",
+      "text": "Support Notes: Not Relevant\nParallel Account Relation: N/A\nSCID Events: Clean\nSystematic Phishing Identified: N/A\nOther issues from requester: N/A\nOther claimants: N/A\nPhishing bans on related accounts: N/A\nNotable account: no\nNote(s) about devices: no\nHS/Pandora countries:\nIP Addresses: There are IP's matching\nEligibility Check for RA and/or TA: Eligible\nAccount Notable (SH, HV, CLvl10): No\n\nThe checklist steps were all reviewed to determine if the player is the TA's owner or not\n\nPoint 1: The RA is not compromised and doesn't show any suspicious activity\nPoint 2: The TA and RA don't share Bridge accounts\nPoint 3: 67% match \n\nTA in CIF Updated?: Yes\nTier in CIF Updated?: Yes\nFAQ Language matches Player Message's Language?: Yes\n\nConclusion/next step: Provide the recovery",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4534",
+      "shortcut": ".aws",
+      "text": "Support Notes: Not Relevant\nOther issues from requester: N/A\nOther claimants: N/A\nPhishing bans on related accounts: N/A\nNotable account: no\nNote(s) about devices: yes\nHS/Pandora countries: US/US\nIP Addresses: There are IP's matching\nEligibility Check for RA and/or TA: Eligible\n\nThe checklist steps were all reviewed to conclude if the player is the TA's owner or not\n\nPoint 1: There are devices matching, no suspicious activity from these devices, IPs and cities\nPoint 2: The account shows recent access due to AWS outage, ticket came from the backlog\n\nTA in CIF Updated?: Yes\nTier in CIF Updated?: Yes\nFAQ Language matches Player Message's Language?: Yes\n\nPandora Actions Taken?: Review\nContent Redacted?: N/A\nTag Used?: ar-lost recent access\nYoung Player actions?: no\nOther accounts compromised from the RA/TA: No\n\nConclusion/next step: Recent access",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4536",
+      "shortcut": ".poh",
+      "text": "Native PT/ES Speaker | Lemu\n\nEscalation: T&S\nMethod: Reassigning",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.456",
+      "shortcut": ".pnsr",
+      "text": "\nSupport Notes: Not Relevant\nParallel Account Relation: Nothing found\nSCID Events: All clean\nSystematic Phishing Identified:No\nOther issues from requester: no\nOther claimants: No\nPhishing bans on related accounts:\nNotable account: no\nNote(s) about devices: no\nHS/Pandora countries:\nIP Addresses: No\nEligibility Check for RA and/or TA: Eligible\n\nThe checklist steps were all reviewed to determine if the player is the TA's owner or not\n\nPoint 1: There are no IP's related, no devices matching\nPoint 2: no related names or other game accounts\nPoint 3: no transactions to request a receipt\nSoft recovery: The player meets all the requirements for SR\n\nTA in CIF Updated?: Yes\nTier in CIF Updated?: Yes\nFAQ Language matches Player Message's Language?: Yes\n\nYoung Player actions?: no\n\nConclusion/next step: Soft Recovery",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4614",
+      "shortcut": ".bug",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Bug report\nKnown issue: Yes\nTrack Number: N/A\nSolution/NS: Thank the player",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4712",
+      "shortcut": ".encreq",
+      "text": "Hi there, this is Juan\n\nThanks for contacting us!\n\nWe’ve noticed some suspicious activity on the account you’ve contacted us from. In order to help you with the other account, we need to make sure that the account you’re contacting us from has never been compromised. Please submit a new request from an existing or new account that has not had any suspicious activity.\n\nIf you like, we can also help you to secure the account you’re currently contacting us from. How would you like to proceed?\n\nLooking forward to your reply.\n\nBest regards, Juan",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4746",
+      "shortcut": ".ban",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Ban dispute\nDisputed Account: \nReason details: \nNeed to escalate?: No\n\nConclusion: No grounds to dispute the ban, I proceed to inform accordingly.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.48",
+      "shortcut": ".pntrans",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Transfer Request (TSCID) \nRequester or target SCID has AP Enable? No\nDoes the target SCID have the game that’s going to be transferred to the SC ID? No\nAre any game accounts connected to the requester or target SC ID compromised/chip active? no\nSuspicion that the player is trying to use the target SCID to phish the game accounts? No\nIs there any game account disconnected from the target SC ID in the last 90 days? No\nHas the requester SC ID claimed store bonus rewards in the last 7 days? No\nHas any of the SC ID been blocked by PhiPhi in the last 6 months? No\nHas the contacting device been used for more than 14 days in the RA? n/a\nDoes the target SC ID belong to the contacting player? yes\nDoes the requester's SCID have unactivated passes stored or marked as ineligible for SC Store purchases? no\n\nConclusion: Transfer",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4854",
+      "shortcut": ".pnrd",
+      "text": "Native speaker of PT/ES | Lemu\n\nIssue: SCID change\nUnable to change SCID autonomously: Yes\nContacting device: Less than 14 days in the account\nPhi Phi blocked: No\nRA and other game accounts connected to the same SCID compromised: No\nEligibility outcome and compromise sessions (only if the account is compromised): Eligible (no CA)\nAccount notable (SH, HV, CLvl10): No\nRationale: Player meets all the criteria mentioned above for SCID email change, nothing suspicious; events are clean\n\nTA in CIF updated?: Yes\nTier in CIF updated?: Yes\nFAQ language matches player message's language?: Yes\n\nNext step: Deny – recent device",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4868",
+      "shortcut": ".escreq",
+      "text": "Hola  jugador, soy Juan de Supercell\n\n¡Gracias por ponerte en contacto con nosotros!\n\nAntes de proceder con tu consulta, nos gustaría informarte de que hemos detectado actividad sospechosa en la cuenta desde la que te has puesto en contacto con nosotros. Por motivos de seguridad, no podemos continuar hasta que la cuenta esté fuera de peligro.\n\n¿Podrías confirmar si podemos proceder a proteger la cuenta desde la que te has puesto en contacto con nosotros?\n\nEsperamos tu respuesta.\n\n¡Saludos!",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.4897",
+      "shortcut": ".3ca",
+      "text": "The CD could not be located, and when the device was queried through Pandora, the search returned no results.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5073",
+      "shortcut": ".4ca",
+      "text": "The CD was not found in the account, but by comparing accounts linked to the previously mentioned device, no matches were identified, this confirms the phishing attempt",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5142",
+      "shortcut": ".ptr",
+      "text": "Provide the recovery",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5261",
+      "shortcut": ".tnf",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Receipt not found\nApple/Android: GPA.3301-6589-9615-30808 | Android\nSolution/NS:  Ask the player to wait for 24 hours or contact us later\n\nNote: The purchase is very recent | Less than 24 hours",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5356",
+      "shortcut": ".juan",
+      "text": " jugador, soy Juan de Supercell",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5444",
+      "shortcut": ".ptinc",
+      "text": "Olá jogador, aqui é o Juan da Supercell.  \n\nObrigado pela sua mensagem.  \n\nLamentamos muito, mas não conseguimos confirmar a sua titularidade desta conta, portanto, não podemos recuperá-la.  \n\nNo entanto, você pode tentar os seguintes passos para tentar recuperar o acesso:  \n\nSe você estava usando um dispositivo Apple, recomendamos entrar em contato com o suporte oficial de recuperação de contas da Apple: https://support.apple.com/pt-br/HT201232  \n\nSe você estava usando uma conta do Google, pode acessar o suporte de recuperação de contas do Google no seguinte link: https://support.google.com/accounts/answer/7682439?hl=pt-BR  \n\nSe você ainda tiver acesso a um dispositivo antigo, tente entrar em contato conosco por meio dele. Isso pode nos ajudar a verificar suas informações com mais precisão.  \n\nSe você tiver outra conta com a qual jogou ao mesmo tempo, entre em contato conosco por meio dessa conta. Isso pode facilitar o processo de verificação e nos ajudar a entender melhor a sua situação.  \n\nAgradecemos a sua compreensão.  \n\nAtenciosamente!  ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5596",
+      "shortcut": ".2sb",
+      "text": "Olá, aqui é o Juan da Supercell.\n\nObrigado por entrar em contato.\n\nEm relação à transferência, observe que ela só é possível se compras com dinheiro real foram feitas no ano de 2025. Ao analisar sua conta, não encontrei nenhuma compra realizada este ano, portanto, não podemos prosseguir com a transferência, pois atualmente não é possível transferir recursos do jogo.\n\nAgradecemos a sua compreensão.\n\nTenha um ótimo dia.\n\nAtenciosamente, Juan da Supercell",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5642",
+      "shortcut": ".pnemail",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Lost account\nSupported by email: No\nCIF filled: No needed\nNS: Contact us from the game",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5662",
+      "shortcut": ".cd",
+      "text": "The contacting device is the oldest one still active, a fact that can be verified by examining its IP relationship with the earliest inactive device.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5671",
+      "shortcut": ".2alr",
+      "text": "Native PT/ES Speaker | Lemu\n\nAlready in use: Yes\nU13:  \nReply: 2nd\nRisk (if needed): \nCA: No\nNS: Deny",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5715",
+      "shortcut": ".pnnb",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is complaining about a negative balance due to a previous refund \nRefund issued: yes\nInvestigation:\nSolution/NS: Informing about the negative balance ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5718",
+      "shortcut": ".pnpa",
+      "text": "Native Speaker of PT/ES | Lemu\n\nIssue: SCID Change (Account Protection - Someone Else)\nUnable to change SCID autonomously: yes\nProtection enabled by a trusted device: yes\nPhi Phi blocked: No\nRA and other game accounts connected to the same SC ID compromised: no\nEligibility outcome and Compromise sessions (Only if the account is compromised): Eligible (No CA)\nAccount Notable (SH, HV, CLvl10): No\nRationale: The protection was enabled by the same owner, the account shows some sessions from different countries, due \n\nNext Step: Deny the rollback - Account clean - Protection abused",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5732",
+      "shortcut": ".clan",
+      "text": "Native PT/ES Speaker | Lemu\n \nIssue: The player is unable to join regular clan due to family friendly and u16 status\nSolution/NS: Informing accordingly",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5757",
+      "shortcut": ".pnwa",
+      "text": "Native PT/ES Speaker | Lemu\n\nSeason Pass: <If yes, and content used, should be escalated>\nCIF Updated with the TA:\n\nIssue: Wrong account | Billing\nRA ID: \nTA ID: \nContent:\nIntact: Yes\nCompare Tab: \nSolution/NS: Asking if the purchase was intended for the TA",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.577",
+      "shortcut": ".hdni",
+      "text": "Hello again, \n\nWe greatly appreciate you taking the time to report this.\n\nWe're aware of the issue, and our game team is doing its best to solve it as soon as possible. Furthermore, we apologize for the inconvenience caused.\n\nFor now, if you follow the steps we sent you in the message before and the issue continues, we found a temporary solution: changing the language settings of your phone to a different one (make sure you can still understand that language). Once the game opens successfully, you can now change your language back to the preferred one!\n\nLet us know if this works for you, and again, we are really sorry for this inconvenience.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.581",
+      "shortcut": ".trcreq",
+      "text": "Merhaba,\n\nBizimle iletişime geçtiğiniz için teşekkürler!\n\nTalebinizle ilgili size yardımcı olmadan önce bizimle iletişime geçtiğiniz hesapta bazı şüpheli faaliyetler tespit ettiğimizi size bildirmek isteriz. Bu nedenle hesabınızı güvence altına almadan devam etmemiz mümkün değil.\n\nBizimle iletişime geçtiğiniz hesabı güvenli hale getirmemizi onaylıyor musunuz?\n\nYanıtınızı bekliyoruz.\n\nSaygılarımızla,",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5845",
+      "shortcut": ".store",
+      "text": "Hello, this is Juan.\n\nThank you for contacting us!\n\nWe really appreciate you taking the time to write to us. I've reviewed your case and want to let you know that I'm reassigning it to the correct queue so it can be handled as effectively as possible. This way, we ensure your report reaches the right team and receives the attention it deserves.\n\nHope that helps.\n\nBest regards, Juan",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.595",
+      "shortcut": ".ptcreq",
+      "text": "Olá!\n\nAgradecemos pela sua mensagem.\n\nDetectamos atividades suspeitas na conta que você usou para entrar em contato conosco. Para ajudar com outra conta, precisamos verificar que esta conta com que você está entrando em contato conosco nunca foi comprometida. Pedimos que você faça um novo pedido a partir de uma conta nova ou existente que não tenha atividades suspeitas.\n\nSe quiser, podemos ajudar você a proteger esta conta com que entrou em contato conosco. Como quer proceder?\n\nAguardamos a sua resposta.\n\nAtenciosamente, Juan",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.5964",
+      "shortcut": ".trrea",
+      "text": "Merhaba, adim Juan\n\nBizimle iletişime geçtiğiniz için teşekkürler!\n\nDurumunuzla ilgili dikkatli bir araştırma yaptık ve sonuç olarak sizi sonraki süreçte yol gösterecek bir bota yönlendireceğiz. Lütfen karşınıza çıkan tüm talimatları eksiksiz şekilde uygulayın.\n\nAncak süreç konusunda endişeniz olmasın! İşlem sırasında bir sorun yaşarsanız sorunla ilgilenip gerekirse süreci devralmak üzere burada hazır olacağız.\n\nAncak asıl isteğiniz konusunda size yardımcı olabilmemiz için yeni bir görüşme başlatmanız gerekebileceğini lütfen unutmayın.\n\nTeşekkürler ve iyi günler!\n\nSaygılarımızla, Juan",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.6006",
+      "shortcut": ".2pad",
+      "text": "Native PT/ES Speaker | Lemu\n\nI agree with the previous agent's decision  \nAgent decision: Provide the email change\nCA: No\nPhiPhi: No\nNS: Already in use",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.6025",
+      "shortcut": ".guest",
+      "text": "Native PT/ES Speaker | Lemu\n\nGDPR Data Request \nEligible in Pandora: Not yet\nCA: no\nSCID Attached?: no\nConclusion/next step: Ask to attach an email to link a SCID",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.6138",
+      "shortcut": ".pnmp",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is claiming the mini Pekka\nAccount met the requirement (Lvl15 + 5000 trophies): No\nInvestigation: 02/12/2025 12:22:36 - Trophies: 4715 (+28)\nSolution/NS: Informing accordingly",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.6213",
+      "shortcut": ".2esc",
+      "text": "Native PT/ES Speaker | Lemu\nEscalation reason: The player name is disruptive | PII | Social Media Ref\nEscalation method: Tagging\nAccount to be moderated: ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.636",
+      "shortcut": ".block",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Ip Blocked - No blue button\nSolution/NS: Self Portal",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.6438",
+      "shortcut": ".sr",
+      "text": "Soft Recovery granted to: ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.6445",
+      "shortcut": ".ruinc",
+      "text": "Привет, игрок, я Хуан из Supercell\n\nСпасибо за твоё сообщение.\n\nК сожалению, мы не смогли подтвердить твоё право собственности на эту учётную запись, поэтому не можем её восстановить.\n\nТем не менее, ты можешь попробовать следующие шаги, чтобы попытаться вернуть доступ:\n\nЕсли ты использовал устройство Apple Мы рекомендуем обратиться в официальную службу поддержки Apple для восстановления учётной записи: https://support.apple.com/ru-ru/HT201232\n\nЕсли ты использовал учётную запись Google Ты можешь перейти в службу поддержки Google для восстановления учётной записи по следующей ссылке: https://support.google.com/accounts/answer/7682439?hl=ru\n\nЕсли у тебя всё ещё есть доступ к более старому устройству Пожалуйста, попробуй связаться с нами с этого устройства. Это может помочь нам более точно проверить твою информацию.\n\nЕсли у тебя есть другая учётная запись, с которой ты играл одновременно Мы просим тебя связаться с нами с этой учётной записи. Это может облегчить процесс проверки и помочь нам лучше понять твою ситуацию.\n\nСпасибо за понимание.\n\nС уважением, Хуан из Supercell",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.6504",
+      "shortcut": ".2ns",
+      "text": "Not upskilled in this game\nBOT Gameplay used: Yes\nNS: Reassigning to the BOT Esc. Gameplay",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.655",
+      "shortcut": ".arinc",
+      "text": "مرحبًا أيها اللاعب، أنا خوان من شركة Supercell\n\nشكرًا على رسالتك.\n\nللأسف، لم نتمكن من تأكيد ملكية هذا الحساب، ولذلك لا يمكننا استعادته في الوقت الحالي.\n\nومع ذلك، يمكنك تجربة الخطوات التالية لاستعادة الوصول:\n\nإذا كنت تستخدم جهاز Apple نوصي بالتواصل مع دعم Apple لاستعادة الحساب عبر الرابط: https://support.apple.com/ar-sa/HT201232\n\nإذا كنت تستخدم حساب Google يمكنك الوصول إلى دعم استعادة حساب Google من هنا: https://support.google.com/accounts/answer/7682439?hl=ar\n\nإذا كان لديك ما زال وصول إلى جهاز قديم يرجى محاولة التواصل معنا من ذلك الجهاز، فقد يساعدنا ذلك في التحقق من معلوماتك بشكل أدق.\n\nإذا كان لديك حساب آخر كنت تلعب به في نفس الوقت يرجى التواصل معنا من ذلك الحساب، فهذا يمكن أن يساعدنا على فهم وضعك بشكل أفضل والمساعدة في التحقق.\n\nشكرًا لتفهمك.\n\nمع أطيب التحيات!",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.66",
+      "shortcut": ".rts",
+      "text": "Native PT/ES Speaker | Lemu\n\nThe player refused to secure the account\nNS: Deny the request",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.6619",
+      "shortcut": ".data",
+      "text": "Native PT/ES Speaker | Lemu\n\nGDPR Data Request\nEligible in Pandora: yes\nCA: no\nSCID Attached?: Yes\nConclusion/next step: Grant data\n\nDeny reason: None",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.6765",
+      "shortcut": ".trouble",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is experiencing problems with the game, either when trying to connect to the server or when trying to open the game.\nNS: Informing accordingly",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.684",
+      "shortcut": ".name",
+      "text": "Native PT/ES Speaker | Lemu\n \nIssue: Name Change (Alliance|Player)\nUnable to self-change: yes\nName changed by T&S: Yes\nPrevious name related to PII/Disruptive: no\nEligible in Pandora: Yes\nConclusion: ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7007",
+      "shortcut": ".pnsug",
+      "text": "Native PT/ES Speaker | Lemu\nIssue: Suggestion based on gameplay\nSolution/NS: Thank the player for the suggestion \n",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.705",
+      "shortcut": ".cant",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is complaining about not being able to make purchases in-game\nSolution/NS: Unable to make order (Android)",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7144",
+      "shortcut": ".frinc",
+      "text": "Bonjour joueur, c’est Juan de Supercell\n\nMerci pour votre message.\n\nMalheureusement, nous n’avons pas pu confirmer la propriété de ce compte, et nous ne pouvons donc pas le récupérer pour le moment.\n\nCependant, vous pouvez essayer les étapes suivantes pour retrouver l’accès :\n\nSi vous utilisiez un appareil Apple Nous vous recommandons de contacter l’assistance Apple pour la récupération de compte : https://support.apple.com/fr-fr/118574\n\nSi vous utilisiez un compte Google Vous pouvez accéder au support de récupération de compte Google ici : https://support.google.com/accounts/answer/7682439?hl=fr\n\nSi vous avez encore accès à un ancien appareil Veuillez essayer de nous contacter depuis cet appareil. Cela peut nous aider à vérifier vos informations plus précisément.\n\nSi vous avez un autre compte avec lequel vous jouiez en même temps Veuillez nous contacter depuis ce compte. Cela peut nous aider à mieux comprendre votre situation et à faciliter la vérification.\n\nMerci de votre compréhension.\n\nCordialement, Juan",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7158",
+      "shortcut": ".enprint",
+      "text": "Hello, this is Juan.\n\nThank you for reaching out to us!\n\nTo best assist you, we need you to attach a screenshot clearly showing the problem you're experiencing. We also ask that you describe the issue in detail, including any additional information that could help us.\n\nWith this information, we can review your case more accurately and provide a more comprehensive response.\n\nHope this helps.\n\nBest regards, Juan",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7285",
+      "shortcut": ".ai",
+      "text": "Native PT/ES Speaker | Lemu\n \nI've already informed them. Despite my attempts to help the player with Free writing full of instructions, he was not satisfied with anyone, and we tried everything possible to solve their problem.\nNS: Close and reject",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7354",
+      "shortcut": ".2ca",
+      "text": "The CD was not found, but by comparing accounts linked to the previously mentioned device, several important matches were identified that help confirm the player's ownership",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7356",
+      "shortcut": ".juju",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Oddities Shop appears empty bug\nSolution/NS: Just inform the player about the issue, as Supercell is aware",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7412",
+      "shortcut": ".ptdata",
+      "text": "Olá, sou Juan, da Supercell.\n\nObrigado por entrar em contato conosco.\n\nPara ajudar você a recuperar ou verificar sua conta, precisamos de algumas informações importantes para identificá-la corretamente. Por favor, inclua as seguintes informações em sua resposta:\n\n- Nome exato da conta, como aparece no jogo\n\n- Tag do jogador (ex.: #ABC123XYZ)\n\n- Número atual de troféus (apenas para Clash of Clans, Clash Royale ou Brawl Stars)\n\n- Nível de experiência (apenas para Boom Beach ou Hay Day)\n\n- Endereço de e-mail anterior vinculado à conta ou um que você se lembre de ter usado\n\n- Capturas de tela que mostrem claramente o nome e a tag da conta\n\n- Se você fez compras com a conta, anexe uma captura de tela do recibo ou comprovante de pagamento.\n\nCom essas informações, podemos analisar seu caso com mais precisão. Agradecemos sua cooperação e paciência enquanto trabalhamos para ajudá-lo.\n\nJuan, da Supercell",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7434",
+      "shortcut": ".pii",
+      "text": "Native PT/ES Speaker | Lemu\nPII Note:\nContains:\nRedacting message\n\nImportant information",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7441",
+      "shortcut": ".login",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player provided the same TA's email\nIs the email provided linked to the TA: yes\nCA: No\nSolution/NS: Send instructions",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7444",
+      "shortcut": ".pnred",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue:  This issue cannot be handled by Supercell support, therefore it must be redirected.\nAccount shows negative balance: No\nSolution/NS: Redirect to Google/Apple",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7483",
+      "shortcut": ".itrea",
+      "text": "Ciao, sono Juan\n\ngrazie per averci contattato!\n\nDopo aver eseguito un'attenta indagine, dobbiamo metterti in contatto con un bot, che ti guiderà alla procedura successiva. Una volta fatto, segui tutte le istruzioni che riceverai.\n\nNon temere, comunque! Se qualcosa dovesse andare storto, rimarremo qui a disposizione per occuparci del tuo caso.\n\nSe così fosse, è probabile che tu debba iniziare una nuova conversazione con noi per poter ricevere nuovamente assistenza per la richiesta originale.\n\nGrazie e buona giornata!\n\nSaluti.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7632",
+      "shortcut": ".pp",
+      "text": "Reject | CNXCO: Phishing template track note",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7642",
+      "shortcut": ".gdpremail",
+      "text": "Native PT/ES Speaker | Lemu\n\nIs the request related to GDPR?: Yes\nThe player mentioned authentication failed?\nIs the player contacting us from the Target Email?: Yes\nWas the cancellation request made during the 14 days (4 days for KR) following the initial deletion request? - yes\nIs the Target account compromised? - no\nDoes it meet escalation the criteria? - no\nConclusion: UP - Email - GDPR Cancel Deletion Request\n\nNote: If the player is unable to contact us, proceed through email",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7676",
+      "shortcut": ".ptclose",
+      "text": "Olá, aqui é o Juan.\n\nObrigado por entrar em contato!\n\nVamos fechar este chamado por enquanto.\n\nSe precisar de suporte novamente, fique à vontade para entrar em contato conosco a qualquer momento.\n\nEspero que isso ajude.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7695",
+      "shortcut": ".readel",
+      "text": "Hello player! I'm Juan from Supercell\n\nThank you for reaching out to us.\n\nWe have received your request to delete your account. Unfortunately, we are experiencing a error with our automated help that is preventing us from processing your request, so we will resend it to our BOT to process your request successfully.\nThank you for your understanding and patience.\n\nBest regards. Juan from Supercell",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7778",
+      "shortcut": ".pad",
+      "text": "Native PT/ES Speaker | Lemu\n\nI agree with the previous agent's decision \nAgent decision: Recover the account based on the matches found\nRisk:  \nNS: ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7822",
+      "shortcut": ".frrea",
+      "text": "Bonjour, moi c'est Juan\n\nMerci de nous avoir contactés.\n\nNous avons enquêté sur votre situation, et nous allons vous rediriger vers un bot qui vous guidera à travers les prochaines étapes. Veuillez suivre les instructions.\n\nNe vous inquiétez pas ! S'il y a un souci pendant le processus, nous sommes toujours là pour vous aider.\n\nVeuillez noter que vous devrez possiblement nous envoyer une nouvelle conversation afin que nous puissions vous aider avec la demande d'origine.\n\nMerci et bonne journée !\n\nÀ bientôt !",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.788",
+      "shortcut": ".iu",
+      "text": "Already in use | Ask for a new email ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.7937",
+      "shortcut": ".pnca",
+      "text": "Native Speaker of PT/ES | Lemu\n\nIssue: CA Recovery\nLocked: yes\nCompromised chip: yes\nRA and other game accounts connected to the same SC ID compromised: yes\nEligibility outcome and Compromise sessions (Only if the account is compromised): Eligible\n\nPoint 1:\nPoint 2:\nPoint 3:\n\nTA in CIF Updated?: Yes\nTier in CIF Updated?: Yes\nFAQ Language matches Player Message's Language?: Yes\n\nNext Step:",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.8022",
+      "shortcut": ".pnyr",
+      "text": "Support Notes: Not Relevant\nParallel Account Relation: Nothing found\nSCID Events: All clean\nSystematic Phishing Identified:No\nOther issues from requester: no\nOther claimants: No\nPhishing bans on related accounts:\nNotable account: no\nNote(s) about devices: no\nHS/Pandora countries: \nIP Addresses: No\nEligibility Check for RA and/or TA: Eligible\n\nThe checklist steps were all reviewed to conclude if the player is the TA's owner or not\n\nPoint 1: There are no IP's related, no devices matching\nPoint 2: no related names or other game accounts\nPoint 3: no transactions to request a receipt\nReject reason: Yellow risk without no matches\n\nTA in CIF Updated?: Yes\nTier in CIF Updated?: Yes\nFAQ Language matches Player Message's Language?: Yes\n\nConclusion/next step: Reject",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.8093",
+      "shortcut": ".del",
+      "text": "Native PT/ES Speaker | Lemu\n\nGDPR deletion\nPlayer’s confirmation: Yes, to bot\nNumber of deletion requests in the past 3 months: 0\nEligibility outcome (Only if the account is compromised): Eligible\nCompromised sessions: no\nConclusion/next step: Delete the account",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.8206",
+      "shortcut": ".pnclose",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player's last message is related to closing the interaction\nSolution/NS: Resolve the ticket",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.821",
+      "shortcut": ".cfta",
+      "text": "Hello, this is Juan.\n\nThank you for contacting us!\n\nWe understand how important it is for you to regain access to your account. However, to help you safely and effectively, it's essential that you contact us directly from the Supercell game in question. This allows us to properly verify the information and protect both your account and your data.\n\nWhy is it necessary to contact us from the correct game?\n\nEach Supercell game has its own integrated support system. When you contact us from a game other than the one your account belongs to, we don't have access to the necessary tools to review or modify information related to that account. This includes recovery processes, ownership verification, or any other type of adjustment.\n\nI hope this helps.\n\nBest regards, Juan",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.8267",
+      "shortcut": ".1ra",
+      "text": "Hello,\n\nThanks for reaching out to us!\n\nI checked your game account's log and found that you have recently accessed it. \n\nFor security reasons, please contact us from the account you need help with. This helps ensure we’re assisting the rightful owner.\n\n Thank you for understanding.\n\nHave a nice day!",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.8286",
+      "shortcut": ".miss",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Missing items / Billing undelivered \nType:  \nDelivered: Pending\nReceipt: Pending\nNS: Ask for a receipt",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.8296",
+      "shortcut": ".buffie",
+      "text": "\nNative PT/ES Speaker | Lemu\n\nIssue: The player is asking for the compensation based on the new Dec 16th update\nInvestigation: The player received the rewards based on their account and unlocked items\n\nSolution/NS: Informing accordingly",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.8423",
+      "shortcut": ".pnrec",
+      "text": "Support Notes: Not Relevant\nParallel Account Relation: N/A\nSCID Events: Clean \nSystematic Phishing Identified: N/A\nOther issues from requester: N/A\nOther claimants: N/A\nPhishing bans on related accounts: N/A\nNotable account: no\nNote(s) about devices: yes\nHS/Pandora countries:\nIP Addresses: There are IP's matching\nEligibility Check for RA and/or TA: Eligible\n\nThe checklist steps were all reviewed to determine if the player is the TA's owner or not\n\nPoint 1: Devices are matching, no suspicious activity from these devices, IPs, and cities\nPoint 2:\nPoint 3:\n\nConclusion/next step: Provide the recovery",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.8584",
+      "shortcut": ".pncb",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: The player is unable to buy in-game due to issues with the store \nCA: No\nNegative Balance: No\nSolution/NS: Informing accordingly",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.8848",
+      "shortcut": ".2del",
+      "text": "Native PT/ES Speaker | Lemu\n\nGDPR deletion\nPlayer’s confirmation: Yes, to bot\nNumber of deletion requests in the past 3 months: 0\nEligibility outcome (Only if the account is compromised): Eligible\nCompromised sessions: yes\n\nConclusion/next step: Ask to secure the account before deleting it",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.8975",
+      "shortcut": ".3data",
+      "text": "Native PT/ES Speaker | Lemu\n\nGDPR Data Request \nEligible in Pandora: no\nCA: yes\nSCID Attached?: Yes\nConclusion/next step: Deny\n\nDeny reason: ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.898",
+      "shortcut": ".rr",
+      "text": "The checklist steps were all reviewed to determine if the player is the TA's owner or not\n\nPoint 1: There are no related IP's, no devices matching\nPoint 2: no related names or other game accounts\nPoint 3: No transactions to request a receipt\n\nReject reason: Country and language mismatch and/or overlapping sessions/playtime without matches\nNote: The options above are not cumulative; you may choose one, the other, or both.\n\nTA in CIF Updated?: Yes\nTier in CIF Updated?: Yes\nFAQ Language matches Player Message's Language?: Yes\n\nConclusion/next step: Reject\n",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.903",
+      "shortcut": ".deinc",
+      "text": "Hallo Spieler, hier ist Juan von Supercell.\n\nVielen Dank für Ihre Nachricht.\n\nLeider konnten wir die Inhaberschaft dieses Kontos nicht bestätigen und können es daher derzeit nicht wiederherstellen.\n\nSie können jedoch die folgenden Schritte versuchen, um wieder Zugriff zu erhalten:\n\nWenn Sie ein Apple-Gerät verwendet haben, empfehlen wir Ihnen, sich zur Kontowiederherstellung an den Apple Support zu wenden: https://support.apple.com/de-de/HT201232\n\nWenn Sie ein Google-Konto verwendet haben, können Sie hier auf die Unterstützung von Google zur Kontowiederherstellung zugreifen: https://support.google.com/accounts/answer/7682439?hl=de\n\nWenn Sie noch Zugriff auf ein älteres Gerät haben, kontaktieren Sie uns bitte über dieses Gerät. Dies kann uns helfen, Ihre Informationen genauer zu überprüfen.\n\nFalls Sie zur gleichen Zeit mit einem anderen Konto gespielt haben, kontaktieren Sie uns bitte über dieses Konto. Dies hilft uns, Ihre Situation besser zu verstehen und die Verifizierung durchzuführen.\n\nVielen Dank für Ihr Verständnis.\n\nMit freundlichen Grüßen!",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.915",
+      "shortcut": ".enclose",
+      "text": "Hello there, here's Juan\n\nThank you for contacting us!\n\nWe will be closing this ticket for now\n\nIf you need support again, please feel free to reach out to us anytime\n\nHope that helps",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.9246",
+      "shortcut": ".pnsb",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Transfer currency due to discontinued game  | How to claim the rewards (Skins and cosmetics)\nNS: Deny, option no longer available",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.9358",
+      "shortcut": ".trinc",
+      "text": "Merhaba oyuncu, ben Supercell’den Juan\n\nMesajınız için teşekkür ederiz.\n\nNe yazık ki, bu hesabın size ait olduğunu doğrulayamadık, bu nedenle hesabı kurtaramıyoruz.\n\nAncak erişimi yeniden kazanmak için aşağıdaki adımları deneyebilirsiniz:\n\nApple cihazı kullanıyorsanız Hesap kurtarma için Apple’ın resmi desteğine başvurmanızı öneririz: https://support.apple.com/tr-tr/HT201232\n\nGoogle hesabı kullanıyorsanız Google’ın hesap kurtarma desteğine şu bağlantıdan ulaşabilirsiniz: https://support.google.com/accounts/answer/7682439?hl=tr\n\nEski bir cihaza hâlâ erişiminiz varsa Lütfen bizimle o cihazdan iletişime geçmeyi deneyin. Bu, bilgilerinizi daha doğru şekilde doğrulamamıza yardımcı olabilir.\n\nAynı anda oynadığınız başka bir hesabınız varsa Lütfen bizimle o hesaptan iletişime geçin. Bu, doğrulama sürecini kolaylaştırabilir ve durumunuzu daha iyi anlamamıza yardımcı olabilir.\n\nAnlayışınız için teşekkür ederiz.\n\nSaygılarımızla, Juan",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.9417",
+      "shortcut": ".2rev",
+      "text": "We have revoked the item purchased by mistake",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.945",
+      "shortcut": ".pn75",
+      "text": "Support Notes: Not Relevant\nParallel Account Relation: N/A\nSCID Events: Clean\nSystematic Phishing Identified: No\nOther issues from requester: N/A\nOther claimants: N/A\nPhishing bans on related accounts: N/A\nNotable account: no\nNote(s) about devices: no\nHS/Pandora countries:\nIP Addresses: There are IP's matching\nEligibility Check for RA and/or TA: Eligible\nAccount Notable (SH, HV, CLvl10): No\n\nThe checklist steps were all reviewed to determine if the player is the TA's owner or not\n\nPoint 1: the CT shows models matching without overlapping sessions/playtime\nPoint 2: Both accounts are clean, no suspicious sessions, no suspicious behavior\nPoint 3: SCID clean, events clean\n\nTA in CIF Updated?: Yes\nTier in CIF Updated?: Yes\nFAQ Language matches Player Message's Language?: Yes\n\nConclusion/next step: Provide the recovery\n",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.962",
+      "shortcut": ".hd399",
+      "text": "Native PT/ES Speaker\n\nMissing/Undelivered Items: Diamonds expended (399)\nDue to/ Related to: Issue\nDelivered: yes\nInvestigation: Accidentally purchased decoration due to design festival issue\n\nTransaction (if applies): 20/10/2025 09:20:41 purchase -399 167 Buy Object: Devilish target practice\nNS: : Revoke and donate",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.9705",
+      "shortcut": ".trcg",
+      "text": "Merhaba,\n\nBizimle iletişime geçtiğiniz için teşekkürler!\n\nDurumunuzu anlıyoruz, ancak bu konu için oyun içinden bizimle iletişime geçmenizi rica ediyoruz. Lütfen aşağıdaki adımları takip edin:\n\n1. Oyunda \"Ayarlar\" kısmına gidin.\n2. \"Yardım ve Destek\" düğmesine dokunun.\n3. Sorununuzla ilgili makaleleri inceleyin.\n4. Aradığınız yanıtı bulamıyorsanız ekranın sağ üst köşesindeki mavi mesaj balonuna dokunarak bize mesaj gönderebilirsiniz.\n\nCihazınız oyun içi Yardım ve Destek özelliğini desteklemiyorsa lütfen başka bir cihaz kullanın veya cihazınızı en son iOS ya da Android sürümüne yükseltin.\n\nSaygılarımızla,",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.974",
+      "shortcut": ".alr",
+      "text": "Native PT/ES Speaker | Lemu\n\nI agree with the previous agent's decision \nAgent decision: Recover the account based on the matches found\nAlready in use: Yes  \nU13: No\nReply:  1st\nRisk (if needed):  Green\nCA: No\nNS: Ask for a new email to link it to the current SCID ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.9783",
+      "shortcut": ".pncountry",
+      "text": "Native PT/ES Speaker | Lemu\n\nIssue: Change of location \nThe account is the TA: Yes\nPrevious changes: No\nVPN Usage?: No\nHas the majority of sessions from the requested Local Country during the last 3 months: Yes\nDoesn’t show signs of compromise, trading, or sharing: No\nCA: No\nNS: ",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.9812",
+      "shortcut": ".pnscid",
+      "text": "Native Speaker of PT/ES | Lemu\n\nIssue: SCID Change\nContacting Device: More than 14 days in the account\nPhi Phi blocked: No\nRA and other game accounts connected to the same SC ID compromised: no\nEligibility outcome and Compromise sessions (Only if the account is compromised): Eligible (No CA)\nAccount Notable (SH, HV, CLvl10): No\nRationale: Player meets all the criteria mentioned above for SCID Email Change, nothing suspicious, events clean\n\nTA in CIF Updated?: Yes\nTier in CIF Updated?: Yes\nFAQ: Does the language match the player's Language?: Yes\n\nNext Step: Provide the email change",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.99",
+      "shortcut": ".esclose",
+      "text": "Hola, soy Juan.\n\n¡Gracias por contactarnos!\n\nCerraremos este ticket por ahora.\n\nSi necesitas ayuda de nuevo, no dudes en contactarnos en cualquier momento.\n\nEspero que te sea útil.",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.9927",
+      "shortcut": ".4rev",
+      "text": "We have donated the diamonds expended by mistake!",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.993",
+      "shortcut": ".prea",
+      "text": "Olá jogador, eu sou Juan da Supercell!\n\nAgradecemos pela sua mensagem.\n\nDepois de realizar uma análise detalhada, precisamos que você acesse o atendimento automático para a próxima etapa por questões de segurança. Pedimos que siga as informações detalhadamente.\n\nNão se preocupe! Se algo der errado durante o processo, estaremos aqui para ajudar.\n\nLembramos que talvez seja preciso iniciar uma nova conversa para ajudarmos com o pedido original.\n\nAgradecemos muito e desejamos um ótimo dia para você!\n\nAtenciosamente, Juan",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.9954",
+      "shortcut": ".1rev",
+      "text": "Wow!",
+      "category": "General",
+      "uses": 0
+    },
+    {
+      "id": "1782090345542.997",
+      "shortcut": ".pnsp",
+      "text": "Support Notes: Not Relevant\nParallel Account Relation: Nothing found\nSCID Events: All clean\nSystematic Phishing Identified: Yes | Pattern\nOther issues from requester: no\nOther claimants: No\nPhishing bans on related accounts: Yes, multiple attempts to recover old accounts | systematic phishing pattern\nNotable account: SH\nNote(s) about devices: no\nHS/Pandora countries: CA/CA\nIP Addresses: No\nEligibility Check for RA and/or TA: Eligible\n\nTA in CIF Updated?: Yes\nTier in CIF Updated?: Yes\nFAQ Language matches Player Message's Language?: Yes\n\nConclusion/next step: Systematic Phishing | Reject",
+      "category": "General",
+      "uses": 0
+    }
+  ]
+}
